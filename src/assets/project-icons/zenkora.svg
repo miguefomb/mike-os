@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" style="--ink:#42651b"><title>Zenkora APP</title>
+    <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#94bf30"/><stop offset="1" stop-color="#42651b"/></linearGradient><radialGradient id="light" cx=".25" cy="0" r="1"><stop stop-color="white" stop-opacity=".2"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#42651b" flood-opacity=".28"/></filter></defs>
+    <rect width="256" height="256" rx="59" fill="url(#bg)"/><rect width="256" height="256" rx="59" fill="url(#light)"/><rect x="1" y="1" width="254" height="254" rx="58" fill="none" stroke="white" stroke-opacity=".25" stroke-width="2"/><g filter="url(#shadow)"><g transform="rotate(-16 128 143)">
+      <rect x="83" y="130" width="90" height="20" rx="8" fill="white"/>
+      <rect x="63" y="102" width="26" height="76" rx="9" fill="white"/>
+      <rect x="47" y="119" width="14" height="42" rx="6" fill="white" opacity=".65"/>
+      <rect x="169" y="102" width="26" height="76" rx="9" fill="white"/>
+      <rect x="197" y="119" width="14" height="42" rx="6" fill="white" opacity=".65"/>
+      </g><path d="m142 42-26 41h20l-11 33 39-49h-24l13-25Z" fill="white"/></g></svg>

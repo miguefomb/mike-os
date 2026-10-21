@@ -13,7 +13,7 @@ pnpm dev --ignore-lock
 
 Tras cambiar el CV: `node scripts/generar-cv.mjs`. Tras cambiar el retrato o la identidad: `node scripts/generar-imagenes.mjs`.
 
-Los iconos propios de los siete proyectos y de los dos accesos web se editan en `scripts/generar-iconos-proyectos.mjs`: `node scripts/generar-iconos-proyectos.mjs` guarda SVG en `src/assets/project-icons/` y PNG en `public/`. La ventana GitHub muestra todos los repositorios públicos del perfil; se actualiza con `node scripts/actualizar-repos.mjs`.
+Los iconos de los nueve proyectos y de los dos accesos web se editan en `scripts/generar-iconos-proyectos.mjs`: `node scripts/generar-iconos-proyectos.mjs` guarda SVG en `src/assets/project-icons/` y PNG en `public/`. Macaré utiliza su isotipo original. La ventana GitHub muestra todos los repositorios públicos del perfil; se actualiza con `node scripts/actualizar-repos.mjs`.
 
 La documentación de la plantilla que sigue se conserva como referencia del sistema original.
 

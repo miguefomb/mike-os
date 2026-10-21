@@ -10,9 +10,25 @@ const require = createRequire(import.meta.url);
 const astroRequire = createRequire(require.resolve('astro/package.json'));
 const { default: sharp } = await import(pathToFileURL(astroRequire.resolve('sharp')).href);
 const escape = (value) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const macareMark = readFileSync(file('src/assets/project-icons/source/macare-isotipo.svg'), 'utf8')
+  .replace('<svg ', '<svg x="64" y="35" ')
+  .replace(/width="[^"]*"/, 'width="128"')
+  .replace(/height="[^"]*"/, 'height="186"')
+  .replaceAll('#35251E', 'white');
 
 // Cada símbolo está dibujado para leerse también en los iconos pequeños de la carpeta.
 const icons = [
+  {
+    id: 'zenkora',
+    art: `<g transform="rotate(-16 128 143)">
+      <rect x="83" y="130" width="90" height="20" rx="8" fill="white"/>
+      <rect x="63" y="102" width="26" height="76" rx="9" fill="white"/>
+      <rect x="47" y="119" width="14" height="42" rx="6" fill="white" opacity=".65"/>
+      <rect x="169" y="102" width="26" height="76" rx="9" fill="white"/>
+      <rect x="197" y="119" width="14" height="42" rx="6" fill="white" opacity=".65"/>
+      </g><path d="m142 42-26 41h20l-11 33 39-49h-24l13-25Z" fill="white"/>`,
+  },
+  { id: 'macare', art: macareMark },
   {
     id: 'mad-mike-prods', name: 'Mad Mike Prods', colors: ['#ff8c42', '#c14b18'], shortcut: true,
     art: `<rect x="56" y="108" width="144" height="91" rx="17" fill="white"/>

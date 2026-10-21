@@ -1,0 +1,37 @@
+{
+  "name": "Zenkora APP",
+  "domain": "zenkora.vercel.app",
+  "description": "Aplicación de fitness y nutrición con inteligencia artificial integrada.",
+  "summary": "Fitness y nutrición con IA: rutinas, registro de entrenamientos y seguimiento del progreso.",
+  "details": [
+    "Zenkora APP es mi aplicación de fitness y nutrición con inteligencia artificial integrada. Reúne la planificación de entrenamientos, el seguimiento de la alimentación y la evolución personal en un mismo lugar.",
+    "El coach de IA permite plantear rutinas según los objetivos y el equipamiento disponible. La aplicación incorpora registro de series, repeticiones y cargas para consultar el progreso del entrenamiento.",
+    "El apartado de nutrición combina seguimiento de calorías y macronutrientes con propuestas de dietas semanales y recetas mediante IA. Los niveles, insignias y rachas añaden una capa de gamificación para acompañar la constancia.",
+    "La experiencia está disponible como aplicación web instalable (PWA). Su web de presentación muestra las funciones y capturas de la interfaz."
+  ],
+  "stack": [
+    "IA generativa",
+    "PWA",
+    "Vercel"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/zenkora/portada.webp",
+      "alt": "Presentación de Zenkora APP con su coach de IA y la interfaz de entrenamiento en móvil"
+    },
+    {
+      "src": "/projects/zenkora/rutinas.webp",
+      "alt": "Pantalla de rutinas de Zenkora APP, tomada de las capturas públicas de su web"
+    }
+  ],
+  "colors": {
+    "from": "#94bf30",
+    "to": "#42651b"
+  },
+  "url": "https://zenkora.vercel.app/",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 0,
+  "example": false,
+  "icon": "/projects/zenkora.png"
+}

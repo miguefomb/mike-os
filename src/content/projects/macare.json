@@ -1,0 +1,39 @@
+{
+  "name": "Macaré",
+  "domain": "macarecafe.vercel.app",
+  "description": "Tienda online en Shopify e identidad visual completa, con tipografía Macaré diseñada desde cero.",
+  "summary": "Tienda Shopify, identidad visual y una tipografía corporativa creada desde cero para una marca de café.",
+  "details": [
+    "Macaré es un proyecto de comercio electrónico y diseño de marca para una tienda de café de especialidad. Mi trabajo abarca la tienda online en Shopify y el desarrollo de toda su identidad visual.",
+    "La identidad conecta el logotipo, los colores, los elementos gráficos y su aplicación en envases, piezas de marca y experiencia digital. AURA, NEXO y RUGE articulan los tres caracteres de la colección de cafés.",
+    "Diseñé desde cero la tipografía corporativa Macaré, una familia de carácter geométrico, contundente y contemporáneo. La muestra adjunta reúne mayúsculas, minúsculas, cifras, signos y caracteres del latín extendido.",
+    "La web enlazada permite recorrer la presentación de la marca, su catálogo y las opciones de producto. Las capturas muestran la experiencia de tienda y la lámina original de la tipografía."
+  ],
+  "stack": [
+    "Shopify",
+    "Identidad visual",
+    "Diseño tipográfico",
+    "Diseño web",
+    "Vercel"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/macare/portada.webp",
+      "alt": "Tienda de Macaré con su identidad visual y los envases de los cafés AURA, NEXO y RUGE"
+    },
+    {
+      "src": "/projects/macare/tipografia.webp",
+      "alt": "Muestra original de la tipografía corporativa Macaré Black, diseñada desde cero por Miguel Fombuena"
+    }
+  ],
+  "colors": {
+    "from": "#a77554",
+    "to": "#503020"
+  },
+  "url": "https://macarecafe.vercel.app/",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 1,
+  "example": false,
+  "icon": "/projects/macare.png"
+}
