@@ -2,7 +2,7 @@
   "name": "Mikeflix",
   "domain": "plexmike.netlify.app",
   "description": "Mi servidor personal de Plex: más de 2.000 películas y más de 300 series.",
-  "summary": "Servidor personal de Plex con +2.000 películas, +300 series y un panel para gestionar la colección.",
+  "summary": "Plex personal con +2.000 películas, +300 series y gestión del catálogo.",
   "details": [
     "Mikeflix es mi servidor personal de Plex, con más de 2.000 películas y más de 300 series. Un proyecto que une mi afición por el cine con la organización y gestión de una biblioteca multimedia.",
     "Su panel web permite explorar la colección, buscar títulos y episodios, y filtrar por películas o series, disco, calidad de vídeo y estado de las copias de seguridad. También permite ordenar el catálogo alfabéticamente, por incorporación reciente o por tamaño.",

@@ -2,7 +2,7 @@
   "name": "Zenkora APP",
   "domain": "zenkora.vercel.app",
   "description": "Aplicación de fitness y nutrición con inteligencia artificial integrada.",
-  "summary": "Fitness y nutrición con IA: rutinas, registro de entrenamientos y seguimiento del progreso.",
+  "summary": "Fitness y nutrición con IA, rutinas y seguimiento del progreso.",
   "details": [
     "Zenkora APP es mi aplicación de fitness y nutrición con inteligencia artificial integrada. Reúne la planificación de entrenamientos, el seguimiento de la alimentación y la evolución personal en un mismo lugar.",
     "El coach de IA permite plantear rutinas según los objetivos y el equipamiento disponible. La aplicación incorpora registro de series, repeticiones y cargas para consultar el progreso del entrenamiento.",

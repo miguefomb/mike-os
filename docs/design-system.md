@@ -2,7 +2,9 @@
 
 > **Mike OS:** se conserva este diseño de escritorio. La identidad usa el retrato y logo aportados por Miguel; se añaden iconos locales de Instagram, YouTube y Spotify. Stack presenta herramientas por disciplina en etiquetas con los tokens existentes. Favoritos incluye un estado vacío. Fuentes en [contenido-mike.md](contenido-mike.md).
 
-Los seis proyectos y los accesos web de Mad Mike Prods y Miguel Fombuena tienen iconos propios de 256 px: degradado de su ficha, esquinas del 23 %, símbolos claros y una iluminación sutil. Las fuentes SVG se guardan en `src/assets/project-icons/` y el generador exporta PNG compatibles con `AppIcon`. Las webs conservan la flecha de acceso externo.
+Los nueve proyectos y los accesos web de Mad Mike Prods y Mi pagina web tienen iconos propios de 256 px: degradado de su ficha, esquinas del 23 %, símbolos claros y una iluminación sutil. Las fuentes SVG se guardan en `src/assets/project-icons/` y el generador exporta PNG compatibles con `AppIcon`. Las webs conservan la flecha de acceso externo.
+
+Las tarjetas de Proyectos reservan dos líneas para la descripción y limitan su texto a ese máximo, también al estrechar la ventana o ampliar el tamaño de letra. El detalle conserva la información completa del proyecto.
 
 > **Plantilla:** este documento es el de Pol OS, el portfolio de Pol Marzà del que nace esta plantilla. Déjalo como ejemplo del método o reescríbelo para tu proyecto.
 
