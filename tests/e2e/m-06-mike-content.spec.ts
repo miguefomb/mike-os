@@ -37,7 +37,7 @@ test('Favoritos muestra la selección completa, ordenada y con imágenes; Libro 
   const favorites = await page.request.get('/favoritos.json');
   const sections = await favorites.json() as { kind: string; items: { id: string; title: string; cover: string }[] }[];
   expect(sections).toHaveLength(4);
-  const counts: Record<string, number> = { movies: 44, music: 22, books: 7, games: 8 };
+  const counts: Record<string, number> = { movies: 45, music: 22, books: 7, games: 8 };
   const collator = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
   for (const section of sections) {
     await expect(page.getByTestId('favorites-card-' + section.kind)).toContainText(`${counts[section.kind]} favoritos`);

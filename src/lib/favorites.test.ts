@@ -129,7 +129,7 @@ describe('src/content/favorites', () => {
   });
 
   test('toda la selección está ordenada en español y no repite elementos', () => {
-    const counts: Record<string, number> = { movies: 44, music: 22, books: 7, games: 8 };
+    const counts: Record<string, number> = { movies: 45, music: 22, books: 7, games: 8 };
     for (const [name, section] of Object.entries(sections)) {
       expect(section.items.length, name).toBe(counts[name]);
       expect(section.items.map((i) => i.title), name).toEqual([...section.items].sort(compareFavorites).map((i) => i.title));

@@ -173,6 +173,15 @@
   },
   {
     "kind": "movies",
+    "id": "coach-carter",
+    "title": "Coach Carter",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c3/Coach_Carter_poster.JPG",
+    "source": "https://en.wikipedia.org/wiki/Coach_Carter",
+    "description": "2005 American film directed by Thomas Carter",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
     "id": "coco",
     "title": "Coco",
     "image": "https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg",

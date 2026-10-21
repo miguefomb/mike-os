@@ -33,6 +33,12 @@
       "category": "Serie"
     },
     {
+      "id": "coach-carter",
+      "title": "Coach Carter",
+      "cover": "/favoritos/peliculas/coach-carter.jpg",
+      "category": "Película"
+    },
+    {
       "id": "coco",
       "title": "Coco",
       "cover": "/favoritos/peliculas/coco.jpg",

@@ -19,6 +19,7 @@ const series = (title, query) => entries.push({ kind: 'movies', title, query, pr
 movie('8 millas', '8_Mile_(film)');
 movie('Aladdin', 'Aladdin_(1992_Disney_film)');
 movie('Avatar', 'Avatar_(2009_film)');
+movie('Coach Carter', 'Coach_Carter');
 movie('Contratiempo', 'The_Invisible_Guest');
 movie('Cómo entrenar a tu dragón', 'How_to_Train_Your_Dragon_(2010_film)');
 movie('Shrek', 'Shrek');
@@ -154,7 +155,7 @@ async function worker() {
       const refresh = info?.image.includes('/assets/images/logos/') || (override && info?.image !== override[0]);
       if (!info || refresh) {
         const resolved = await resolve(entry);
-        info = { kind: entry.kind, id, title: entry.title, ...resolved, ...(override ? { image: override[0], source: override[1], ...(entry.kind === 'music' ? { profile: resolved.source } : {}) } : {}), retrievedAt: '2026-10-21' };
+        info = { kind: entry.kind, id, title: entry.title, ...resolved, ...(override ? { image: override[0], source: override[1], ...(entry.kind === 'music' ? { profile: resolved.source } : {}) } : {}), retrievedAt: new Date().toISOString().slice(0, 10) };
         provenance.set(`${entry.kind}/${id}`, info);
       }
       const output = new URL(`public${cover}`, root);

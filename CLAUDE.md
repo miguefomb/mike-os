@@ -71,7 +71,7 @@ El procedimiento completo —comprobar lo ya configurado, elegir alcance (`user`
 **Nombre:** Mike OS
 **Descripción:** Portfolio de Miguel Fombuena Llorens / Mad Mike Prods, adaptado de pol-os-template.
 **Estado actual:** Personalizado con el material de `content/madmike_vercel/`, que se conserva como referencia sin modificar.
-Destino de publicación: Vercel, proyecto `mike-os`, dominio `https://migueos.vercel.app` y repositorio público `miguefomb/mike-os`. Los formularios esperan configuración real de correo, Turnstile y límites compartidos. Favoritos contiene 81 entradas reales con imágenes y orden alfabético; las reseñas están vacías.
+Destino de publicación: Vercel, proyecto `mike-os`, dominio `https://migueos.vercel.app` y repositorio público `miguefomb/mike-os`. Los formularios esperan configuración real de correo, Turnstile y límites compartidos. Favoritos contiene 82 entradas reales con imágenes y orden alfabético; las reseñas están vacías.
 Las fuentes y decisiones están en `docs/contenido-mike.md`. El resto de estos documentos conserva el método de la plantilla.
 
 Un escritorio estilo macOS: pantalla de acceso decorativa, proyectos que se abren en un navegador interno, el CV

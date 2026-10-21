@@ -4,7 +4,7 @@ Portfolio de **Miguel Fombuena Llorens / Mad Mike Prods**, adaptado de [pol-os-t
 
 El contenido se ha migrado de `content/madmike_vercel/`: perfil, CV, proyectos, recursos, herramientas, retrato y redes sociales. Las fuentes y los datos pendientes están en [docs/contenido-mike.md](docs/contenido-mike.md).
 
-**Publicación:** repositorio público [miguefomb/mike-os](https://github.com/miguefomb/mike-os), proyecto Vercel `mike-os` y dominio [migueos.vercel.app](https://migueos.vercel.app). El envío real de correo está pendiente de configuración. Favoritos contiene 81 entradas personales con imágenes y orden alfabético; Libro de visitas empieza vacío. La carpeta de referencia no se sirve como parte del sitio.
+**Publicación:** repositorio público [miguefomb/mike-os](https://github.com/miguefomb/mike-os), proyecto Vercel `mike-os` y dominio [migueos.vercel.app](https://migueos.vercel.app). El envío real de correo está pendiente de configuración. Favoritos contiene 82 entradas personales con imágenes y orden alfabético; Libro de visitas empieza vacío. La carpeta de referencia no se sirve como parte del sitio.
 
 ```powershell
 pnpm install --frozen-lockfile
