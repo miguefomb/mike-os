@@ -1,0 +1,37 @@
+{
+  "name": "Facturas & Presupuestos",
+  "domain": "madmikeprods.vercel.app/ia/guia_app_facturas.html",
+  "description": "De la foto de una factura al registro de gastos y al presupuesto PDF.",
+  "summary": "De la foto de una factura al registro de gastos y al presupuesto PDF.",
+  "details": [
+    "Sistema de automatización para el registro de gastos y la creación de presupuestos. Acepta fotos y PDF, extrae los datos de las facturas y permite revisarlos antes de enviarlos a Google Sheets.",
+    "La segunda parte calcula importes e impuestos y genera presupuestos PDF con identidad corporativa. Make conecta el backend con Google Drive y Sheets.",
+    "El backend usa FastAPI y Python, con Llama 4 Scout mediante Groq y un modelo de respaldo en OpenRouter. La ficha enlaza a la guía del sistema; no a una demo pública de facturación."
+  ],
+  "stack": [
+    "Python",
+    "FastAPI",
+    "Groq",
+    "OpenRouter",
+    "Make",
+    "Google Sheets",
+    "Google Drive",
+    "Hugging Face"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/facturas-presupuestos/portada.webp",
+      "alt": "Presentación de la app de facturas y presupuestos"
+    }
+  ],
+  "colors": {
+    "from": "#49b89d",
+    "to": "#127d71"
+  },
+  "url": "https://madmikeprods.vercel.app/ia/guia_app_facturas.html",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 2,
+  "example": false,
+  "icon": "/projects/facturas-presupuestos.png"
+}

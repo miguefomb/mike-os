@@ -2,11 +2,10 @@
  * Los repositorios de la ventana GitHub (C-01): de la respuesta de la API de GitHub a las tarjetas, sin red ni DOM. Lo usan el script diario
  * (`scripts/actualizar-repos.mjs`, que Node ejecuta sin compilar: solo sintaxis «borrable»), la ventana y los tests.
  *
- * Solo salen los repositorios públicos que Pol etiqueta con el topic `showcase`, y nunca los forks.
+ * Muestra todos los repositorios públicos del perfil de Miguel, incluidos forks y archivados.
  */
-import { PERSONA } from '../content/persona';
+import { PERSONA } from '../content/persona.ts';
 
-export const SHOWCASE_TOPIC = 'showcase';
 export const OWNER = PERSONA.github;
 export const PROFILE_URL = `https://github.com/${OWNER}`;
 
@@ -54,10 +53,10 @@ const isHttps = (u: string | null | undefined): u is string => {
   }
 };
 
-/** Los repositorios que salen en la web: públicos, sin forks y con el topic `showcase`, del más reciente al más antiguo. */
-export function toShowcase(api: readonly ApiRepo[]): Repo[] {
+/** Todos los repositorios públicos del perfil, del más reciente al más antiguo, sin depender de sus topics. */
+export function toPublicRepos(api: readonly ApiRepo[]): Repo[] {
   return api
-    .filter((r) => !r.private && !r.fork && (r.topics ?? []).includes(SHOWCASE_TOPIC))
+    .filter((r) => !r.private)
     .filter((r) => r.html_url.startsWith(`${PROFILE_URL}/`))
     .map((r) => ({
       name: r.name,

@@ -1,11 +1,29 @@
-# pol-os-template
+# Mike OS · Miguel Fombuena
+
+Portfolio de **Miguel Fombuena Llorens / Mad Mike Prods**, adaptado de [pol-os-template](https://github.com/polmarza/pol-os-template).
+
+El contenido se ha migrado de `content/madmike_vercel/`: perfil, CV, proyectos, recursos, herramientas, retrato y redes sociales. Las fuentes y los datos pendientes están en [docs/contenido-mike.md](docs/contenido-mike.md).
+
+**Publicación:** repositorio público [miguefomb/mike-os](https://github.com/miguefomb/mike-os), proyecto Vercel `mike-os` y dominio [migueos.vercel.app](https://migueos.vercel.app). El envío real de correo está pendiente de configuración. Favoritos contiene 81 entradas personales con imágenes y orden alfabético; Libro de visitas empieza vacío. La carpeta de referencia no se sirve como parte del sitio.
+
+```powershell
+pnpm install --frozen-lockfile
+pnpm dev --ignore-lock
+```
+
+Tras cambiar el CV: `node scripts/generar-cv.mjs`. Tras cambiar el retrato o la identidad: `node scripts/generar-imagenes.mjs`.
+
+Los iconos propios de los siete proyectos y de los dos accesos web se editan en `scripts/generar-iconos-proyectos.mjs`: `node scripts/generar-iconos-proyectos.mjs` guarda SVG en `src/assets/project-icons/` y PNG en `public/`. La ventana GitHub muestra todos los repositorios públicos del perfil; se actualiza con `node scripts/actualizar-repos.mjs`.
+
+La documentación de la plantilla que sigue se conserva como referencia del sistema original.
+
+## Plantilla original
 
 Una plantilla de portfolio con forma de **sistema operativo de escritorio en el navegador**: pantalla de acceso, ventanas,
 dock, Terminal con minijuegos, proyectos que se abren en un navegador interno, el CV como documento, notas con su página
 pública, un Libro de visitas y un correo que llega de verdad.
 
-Nace de **[Pol OS](https://polmarza.com)**, el portfolio de Pol Marzà. Esta copia trae el mismo sistema con el contenido de
-una persona ficticia, Álex Ejemplo, para que cambies los datos y lo publiques como tuyo.
+Nace de **[Pol OS](https://polmarza.com)**, el portfolio de Pol Marzà. Mike OS utiliza ese sistema con el contenido de Miguel Fombuena.
 
 ![El escritorio de la plantilla: iconos a la derecha, el dock abajo y la barra de menú arriba](.github/capturas/escritorio.webp)
 
@@ -21,8 +39,8 @@ una persona ficticia, Álex Ejemplo, para que cambies los datos y lo publiques c
 - **Notas**: una carpeta de entradas en Markdown. Cada una tiene además su página pública, con vista previa al compartir, para que Google la encuentre.
 - **Correo**: un formulario con forma de cliente de correo que te llega de verdad (Cloudflare Email Service, con anti-bots y límite de envíos). No guarda nada.
 - **Libro de visitas**: reseñas que pasan por la confirmación del correo de su autor y por tu aprobación, sin base de datos.
-- **Favoritos**: tu top de videojuegos, películas, libros y música, con un mini reproductor de YouTube.
-- **Stack** y **GitHub**: tus herramientas y tus repositorios destacados (los que llevan el topic `showcase`), calculados desde GitHub por una tarea programada.
+- **Favoritos**: selección alfabética de videojuegos, películas y series, libros y artistas, con imágenes locales. Conserva el mini reproductor para futuras canciones o tráileres.
+- **Stack** y **GitHub**: tus herramientas profesionales y los repositorios públicos de tu perfil. Una tarea opcional actualiza los datos de GitHub.
 - **Terminal**: comandos, huevos de Pascua y `minigames` (Wordle, ahorcado, adivina el número, `memory` y `checkers`, damas en 3D contra la máquina).
 - **Ajustes**: tema claro u oscuro, fondo de pantalla y tamaño del texto.
 - **Cómo está hecho**: un documento que explica el sistema por dentro.
@@ -57,14 +75,13 @@ Sin cuentas ni base de datos: el contenido vive en el repositorio y cada cambio 
    ```bash
    node scripts/generar-cv.mjs                 # el PDF del CV, desde sobre-mi.md
    node scripts/generar-imagenes.mjs           # iconos e imagen para compartir, con tu foto y tu nombre
-   node scripts/generar-portadas-ejemplo.mjs   # portadas de ejemplo para los favoritos que aún no tengan la suya
+   node scripts/importar-favoritos.mjs         # selección personal, imágenes reales y registro de fuentes
    ```
 5. **Publica** en Cloudflare: la guía paso a paso está en [`docs/despliegue.md`](docs/despliegue.md). Cambia antes
    `SITE_URL` y el remitente (`CONTACT_FROM`) en `wrangler.jsonc`.
 
 Para que el Stack y la ventana GitHub se rellenen solos, lanza la tarea **Actions → Actualizar datos** (o activa su horario
-diario en `.github/workflows/actualizar-datos.yml`). Para destacar un repositorio en la ventana GitHub, añádele el topic
-`showcase`.
+diario en `.github/workflows/actualizar-datos.yml`). La ventana GitHub incluye todos tus repositorios públicos sin exigir topics.
 
 ## Comandos
 
@@ -96,12 +113,11 @@ construye y con qué prueba se demostrará cada requisito. Se ve en el repositor
 
 El método completo, como plantilla para cualquier proyecto, está en [project-template](https://github.com/polmarza/project-template).
 
-## Créditos del contenido de ejemplo
+## Fuentes del contenido
 
-- Películas: *Big Buck Bunny*, *Sintel*, *Tears of Steel*, *Spring* y *Charge*, películas abiertas de la
-  [Blender Foundation](https://studio.blender.org/films/) (CC BY).
-- Música: temas de [Kevin MacLeod](https://incompetech.com) (CC BY).
-- Los videojuegos y libros de Favoritos solo se nombran; sus portadas son de ejemplo, generadas por `scripts/generar-portadas-ejemplo.mjs`.
+El contenido profesional procede de los materiales de Miguel; ver [contenido de Mike OS](docs/contenido-mike.md).
+Los favoritos son su selección personal. Las fuentes de cada portada y foto se registran en [favoritos-fuentes.json](docs/favoritos-fuentes.json).
+Los iconos de proyectos y accesos web tienen fuentes SVG propias en `src/assets/project-icons/`.
 
 ## Licencia
 

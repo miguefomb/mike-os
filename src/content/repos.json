@@ -1,4 +1,71 @@
 {
-  "generatedAt": "2026-10-01",
-  "repos": []
+  "generatedAt": "2026-10-21",
+  "repos": [
+    {
+      "name": "mike-os",
+      "url": "https://github.com/miguefomb/mike-os",
+      "description": "Portfolio de Miguel Fombuena: un escritorio con Astro y Svelte.",
+      "homepage": "https://portfoliomigue.vercel.app",
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-10-21T10:12:09Z",
+      "archived": false
+    },
+    {
+      "name": "diagram-design",
+      "url": "https://github.com/miguefomb/diagram-design",
+      "description": "38 editorial diagram types for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "homepage": "https://cathrynlavery.github.io/diagram-design/",
+      "language": "HTML",
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-09-07T19:27:56Z",
+      "archived": false
+    },
+    {
+      "name": "VoiceStudio",
+      "url": "https://github.com/miguefomb/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "homepage": "https://voicestudio.sh",
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-09-07T19:27:51Z",
+      "archived": false
+    },
+    {
+      "name": "moodle-theme-glass",
+      "url": "https://github.com/miguefomb/moodle-theme-glass",
+      "description": "A modern Moodle theme featuring a sleek glassmorphism aesthetic, clean design, responsive layout, and an improved user experience. Compatible with Moodle 4.5.X.",
+      "homepage": null,
+      "language": "SCSS",
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-09-01T22:41:35Z",
+      "archived": false
+    },
+    {
+      "name": "Portfolio-white-theme",
+      "url": "https://github.com/miguefomb/Portfolio-white-theme",
+      "description": "Portfolio de Iron Coding",
+      "homepage": null,
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-08-24T14:02:53Z",
+      "archived": false
+    },
+    {
+      "name": "Open-Higgsfield-AI",
+      "url": "https://github.com/miguefomb/Open-Higgsfield-AI",
+      "description": "Open-source alternative to Higgsfield AI — Free AI image generation & cinema studio with 20+ models (Flux, SDXL, Midjourney, Ideogram). Self-hosted, customizable, MIT licensed.",
+      "homepage": "https://muapi.ai/open-higgsfield-ai",
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushedAt": "2026-04-09T12:03:40Z",
+      "archived": false
+    }
+  ]
 }

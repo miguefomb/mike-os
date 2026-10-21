@@ -1,0 +1,13 @@
+/content/
+.cache/
+.git/
+.env*
+.dev.vars*
+.wrangler/
+.astro/
+.vercel/
+dist/
+node_modules/
+test-results/
+playwright-report/
+coverage/

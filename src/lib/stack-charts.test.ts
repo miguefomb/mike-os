@@ -1,9 +1,19 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, test } from 'vitest';
-import stack from '../content/stack.json';
+import type { StackTool } from './stack';
 import { CATEGORIES } from './stack-catalog';
 import { cumulativeByYear, donutArcs, linePoints, ringPath } from './stack-charts';
+
+// La geometría se prueba con datos controlados, aunque el perfil no publique estadísticas de GitHub.
+const stack: { tools: StackTool[] } = {
+  tools: [
+    { id: 'typescript', name: 'TypeScript', category: 'lenguajes', repos: 4, since: 2023 },
+    { id: 'python', name: 'Python', category: 'lenguajes', repos: 2, since: 2025 },
+    { id: 'svelte', name: 'Svelte', category: 'interfaz', repos: 3, since: 2024 },
+    { id: 'cloudflare', name: 'Cloudflare Workers', category: 'datos', repos: 1, since: 2026 },
+  ],
+};
 
 describe('donutArcs', () => {
   const geometry = { cx: 60, cy: 60, outer: 56, inner: 36, gap: 1.5 };
@@ -94,7 +104,7 @@ describe('linePoints', () => {
 });
 
 // ─── Colores de categoría ──────────────────────────────────────────────────────────────────────────────────────
-const css = readFileSync(join(process.cwd(), 'src/styles/tokens.css'), 'utf8');
+const css = readFileSync(join(process.cwd(), 'src/styles/tokens.css'), 'utf8').replace(/\r\n/g, '\n');
 
 const luminance = (hex: string) => {
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));

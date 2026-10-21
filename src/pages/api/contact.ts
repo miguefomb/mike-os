@@ -3,7 +3,8 @@
  * Aquí solo se conectan los bindings reales; la lógica está en src/lib/contact-service.ts.
  */
 import type { APIRoute } from 'astro';
-import { env } from 'cloudflare:workers';
+import { serverServices } from '../../server/services';
+import { jsonResponse } from '../../lib/json-response';
 import { handleContact } from '../../lib/contact-service';
 import { verifyTurnstile } from '../../lib/turnstile';
 
@@ -20,22 +21,23 @@ const JSON_HEADERS = {
   'Referrer-Policy': 'no-referrer',
 };
 
-export const ALL: APIRoute = async ({ request }) => {
+export const ALL: APIRoute = async ({ request, clientAddress }) => {
+  const services = serverServices();
+  if (request.method === 'POST' && !services.ready) return jsonResponse({ status: 503, body: { ok: false, code: 'not_configured' } });
   const length = request.headers.get('content-length');
   const result = await handleContact(
     {
       method: request.method,
       contentType: request.headers.get('content-type'),
       contentLength: length !== null && /^\d+$/.test(length) ? Number(length) : null,
-      // Cloudflare fija esta cabecera en el borde; un cliente no puede falsearla en producción.
-      ip: request.headers.get('cf-connecting-ip'),
+      ip: clientAddress,
       readBody: () => request.text(),
     },
     {
-      limiter: env.CONTACT_LIMITER,
-      verifyTurnstile: (token, ip) => verifyTurnstile(token, env.TURNSTILE_SECRET_KEY ?? '', ip),
-      sendEmail: (message) => env.EMAIL.send(message),
-      config: { to: env.CONTACT_TO, from: env.CONTACT_FROM },
+      limiter: services.contactLimiter,
+      verifyTurnstile: (token, ip) => verifyTurnstile(token, services.turnstileSecret, ip),
+      sendEmail: services.sendEmail,
+      config: services.config,
       // Solo códigos y estados: el contenido del mensaje no se registra nunca.
       log: ({ code, status }) => {
         if (status >= 500) console.error(`[contact] ${code} ${status}`);

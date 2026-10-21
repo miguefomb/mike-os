@@ -1,33 +1,33 @@
 {
-  "name": "pol-os-template",
+  "name": "mike-os",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Plantilla de portfolio con forma de sistema operativo de escritorio en el navegador (Astro, Svelte y Cloudflare).",
-  "author": "Pol Marzà",
+  "description": "Portfolio de Miguel Fombuena: un escritorio con Astro y Svelte, alojado en Vercel.",
+  "author": "Miguel Fombuena",
   "license": "MIT",
   "packageManager": "pnpm@11.2.2",
   "engines": {
-    "node": ">=22.12.0"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/preparar-vercel.mjs",
     "preview": "astro preview",
-    "check": "wrangler types && astro check",
+    "check": "astro check",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test --project=escritorio --project=movil",
     "test:e2e:navegadores": "playwright test --project=safari --project=safari-movil --project=firefox",
-    "deploy": "astro build && wrangler deploy",
-    "types": "wrangler types",
+    "deploy": "pnpm dlx vercel --prod",
     "test:csp": "playwright test -c playwright.csp.config.ts"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "14.3.4",
     "@astrojs/svelte": "9.0.1",
+    "@astrojs/vercel": "11.0.16",
     "astro": "7.3.8",
+    "sharp": "^0.35.5",
     "simple-icons": "^16.34.0",
     "svelte": "5.57.2"
   },
@@ -38,7 +38,6 @@
     "@types/node": "^24.19.1",
     "@vitest/coverage-v8": "5.0.3",
     "typescript": "6.0.3",
-    "vitest": "5.0.3",
-    "wrangler": "4.149.0"
+    "vitest": "5.0.3"
   }
 }

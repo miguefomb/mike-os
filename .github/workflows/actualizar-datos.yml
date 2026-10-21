@@ -1,7 +1,7 @@
 # Actualiza los datos que salen de GitHub y los publica si han cambiado:
 #   - src/content/stack.json        (la ventana Stack, M-05)
 #   - src/content/projects/*.json   (lenguajes, etiquetas y licencia de los proyectos con repositorio público)
-#   - src/content/repos.json        (la ventana GitHub, C-01: los repositorios públicos con el topic `showcase`)
+#   - src/content/repos.json        (la ventana GitHub, C-01: todos los repositorios públicos del perfil)
 #
 # Solo se ejecuta por calendario o a mano, nunca por un pull request: tiene permiso de escritura y un secreto.
 # Publica directamente en `main` (la fusión despliega la web), pero antes pasa los tests de

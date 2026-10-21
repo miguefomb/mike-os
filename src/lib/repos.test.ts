@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import file from '../content/repos.json';
-import { OWNER, PROFILE_URL, SHOWCASE_TOPIC, languageColor, sameRepos, toShowcase, updatedAgo, type ApiRepo } from './repos';
+import { OWNER, PROFILE_URL, languageColor, sameRepos, toPublicRepos, updatedAgo, type ApiRepo } from './repos';
 
 const api = (over: Partial<ApiRepo> & { name: string }): ApiRepo => ({
   html_url: `https://github.com/${OWNER}/${over.name}`,
@@ -13,35 +13,35 @@ const api = (over: Partial<ApiRepo> & { name: string }): ApiRepo => ({
   archived: false,
   fork: false,
   private: false,
-  topics: [SHOWCASE_TOPIC],
+  topics: [],
   ...over,
 });
 
 describe('qué repositorios salen', () => {
-  test('solo los públicos con el topic showcase, sin forks; los archivados salen marcados', () => {
-    const repos = toShowcase([
-      api({ name: 'sale' }),
+  test('incluye todos los públicos, con cualquier topic o sin topics, y también forks y archivados', () => {
+    const repos = toPublicRepos([
+      api({ name: 'sale', topics: ['showcase'] }),
       api({ name: 'sin-etiqueta', topics: ['cli'] }),
       api({ name: 'sin-topics', topics: undefined }),
       api({ name: 'privado', private: true }),
       api({ name: 'fork', fork: true }),
       api({ name: 'archivado', archived: true }),
     ]);
-    expect(repos.map((r) => r.name)).toEqual(['sale', 'archivado']);
+    expect(repos.map((r) => r.name)).toEqual(['sale', 'sin-etiqueta', 'sin-topics', 'fork', 'archivado']);
     expect(repos.find((r) => r.name === 'archivado')?.archived).toBe(true);
   });
 
-  test('de otra cuenta no sale nada, aunque lleve la etiqueta', () => {
-    expect(toShowcase([api({ name: 'ajeno', html_url: 'https://github.com/otra/ajeno' })])).toEqual([]);
+  test('no incluye repositorios de otra cuenta', () => {
+    expect(toPublicRepos([api({ name: 'ajeno', html_url: 'https://github.com/otra/ajeno' })])).toEqual([]);
   });
 
   test('ordenados por el último cambio, el más reciente primero', () => {
-    const repos = toShowcase([api({ name: 'viejo', pushed_at: '2025-01-01T00:00:00Z' }), api({ name: 'nuevo', pushed_at: '2026-10-15T00:00:00Z' })]);
+    const repos = toPublicRepos([api({ name: 'viejo', pushed_at: '2025-01-01T00:00:00Z' }), api({ name: 'nuevo', pushed_at: '2026-10-15T00:00:00Z' })]);
     expect(repos.map((r) => r.name)).toEqual(['nuevo', 'viejo']);
   });
 
   test('negativo: una web que no es https:// se descarta (el repositorio sale sin web) y una descripción vacía queda en null', () => {
-    const [a, b, c] = toShowcase([
+    const [a, b, c] = toPublicRepos([
       api({ name: 'a', homepage: 'http://inseguro.com', pushed_at: '2026-10-03T00:00:00Z' }),
       api({ name: 'b', homepage: 'javascript:alert(1)', pushed_at: '2026-10-02T00:00:00Z' }),
       api({ name: 'c', homepage: 'https://c.dev', description: '   ', pushed_at: '2026-10-01T00:00:00Z' }),
@@ -53,7 +53,7 @@ describe('qué repositorios salen', () => {
   });
 
   test('la fecha de generación no cuenta como cambio (si no, habría un commit cada día)', () => {
-    const repos = toShowcase([api({ name: 'x' })]);
+    const repos = toPublicRepos([api({ name: 'x' })]);
     expect(sameRepos({ repos }, { repos })).toBe(true);
     expect(sameRepos({ repos }, { repos: [] })).toBe(false);
   });

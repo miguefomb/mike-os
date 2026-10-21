@@ -2,7 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { NETWORKS, RELATIONS, normalizeLink, LIMITS as GUESTBOOK_LIMITS } from './lib/guestbook';
-import { COVER_PATH, DURATION, ITEM_ID, MAX_ITEMS, SHELVID_ORIGIN, YOUTUBE_ID } from './lib/favorites';
+import { COVER_PATH, DURATION, ITEM_ID, YOUTUBE_ID } from './lib/favorites';
 import { isSafeProjectUrl } from './lib/project-url';
 
 const hexColor = z.string().regex(/^#[0-9a-f]{6}$/i);
@@ -114,10 +114,9 @@ const itemId = z.string().regex(ITEM_ID);
 const cover = z.string().regex(COVER_PATH, 'La portada debe estar en /public/favoritos/<sección>/<nombre>.jpg');
 const youtubeId = z.string().regex(YOUTUBE_ID, 'Un identificador de YouTube tiene once caracteres');
 const httpsUrl = z.string().refine((u) => u.startsWith('https://') && URL.canParse(u), 'La dirección debe ser https://');
-const shelvidUrl = httpsUrl.refine((u) => u.startsWith(`${SHELVID_ORIGIN}/`), `La ficha de un juego debe estar en ${SHELVID_ORIGIN}`);
 const link = z.object({ label: z.string().min(1), url: httpsUrl });
 
-/** Un archivo por sección de Favoritos: el top 10 de Pol, con su contenido y sus portadas (S-03). */
+/** Un archivo por sección, sin limitar la selección personal a diez entradas. */
 const favorites = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/favorites' }),
   schema: z.discriminatedUnion('kind', [
@@ -125,23 +124,26 @@ const favorites = defineCollection({
       kind: z.literal('games'),
       title: z.string().min(1),
       credit: link.optional(),
-      items: z.array(z.object({ id: itemId, title: z.string().min(1), year: z.number().int().optional(), cover, url: shelvidUrl })).max(MAX_ITEMS),
+      items: z.array(z.object({ id: itemId, title: z.string().min(1), year: z.number().int().optional(), cover, url: httpsUrl, edition: z.string().optional() })),
     }),
     z.object({
       kind: z.literal('movies'),
       title: z.string().min(1),
-      items: z.array(z.object({ id: itemId, title: z.string().min(1), year: z.number().int(), synopsis: z.string().min(20).max(240), cover, trailer: youtubeId })).max(MAX_ITEMS),
+      items: z.array(z.object({ id: itemId, title: z.string().min(1), year: z.number().int().optional(), synopsis: z.string().min(20).max(240).optional(), category: z.enum(['Película', 'Serie', 'Saga']).optional(), cover, trailer: youtubeId.optional() })),
     }),
     z.object({
       kind: z.literal('books'),
       title: z.string().min(1),
       link: link.optional(),
-      items: z.array(z.object({ id: itemId, title: z.string().min(1), author: z.string().min(1), cover })).max(MAX_ITEMS),
+      items: z.array(z.object({ id: itemId, title: z.string().min(1), author: z.string().min(1), cover })),
     }),
     z.object({
       kind: z.literal('music'),
       title: z.string().min(1),
-      items: z.array(z.object({ id: itemId, title: z.string().min(1), artist: z.string().min(1), cover, video: youtubeId, duration: z.string().regex(DURATION).optional() })).max(MAX_ITEMS),
+      items: z.array(z.union([
+        z.object({ type: z.literal('artist'), id: itemId, title: z.string().min(1), cover, url: httpsUrl }),
+        z.object({ id: itemId, title: z.string().min(1), artist: z.string().min(1), cover, video: youtubeId, duration: z.string().regex(DURATION).optional() }),
+      ])),
     }),
   ]),
 });

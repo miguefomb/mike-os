@@ -23,7 +23,7 @@ test.describe('M-01 Pantalla de acceso', () => {
   test('si la foto no carga, quedan las iniciales', async ({ page }) => {
     await page.route('**/*', (route) => (route.request().resourceType() === 'image' ? route.abort() : route.continue()));
     await gotoLock(page);
-    await expect(page.getByTestId('lock-initials')).toHaveText('PM');
+    await expect(page.getByTestId('lock-initials')).toHaveText(PERSONA.initials);
     await expect(page.getByTestId('lock-photo')).toHaveCount(0);
     await expect(page.getByTestId('lock-name')).toHaveText(PERSONA.name);
   });

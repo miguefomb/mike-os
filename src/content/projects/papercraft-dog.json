@@ -1,0 +1,34 @@
+{
+  "name": "Papercraft Dog",
+  "domain": "madmikeprods.vercel.app/ia/papercraft-dog.html",
+  "description": "Una foto de tu perro convertida en una figura de papel para montar.",
+  "summary": "Una foto de tu perro convertida en una figura de papel para montar.",
+  "details": [
+    "Tutorial creativo que combina una foto de referencia, una plantilla geométrica y un prompt para diseñar una figura de papel personalizada.",
+    "La guía acompaña el proceso desde la generación de la plantilla hasta la impresión en A4, el recorte y el montaje.",
+    "Es un recurso paso a paso de la colección de guías de IA de Miguel Fombuena."
+  ],
+  "stack": [
+    "Generación de imágenes",
+    "Prompting",
+    "Papercraft",
+    "HTML",
+    "CSS"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/papercraft-dog/portada.webp",
+      "alt": "Plantilla geométrica de Papercraft Dog para imprimir y montar"
+    }
+  ],
+  "colors": {
+    "from": "#e9a476",
+    "to": "#b5693c"
+  },
+  "url": "https://madmikeprods.vercel.app/ia/papercraft-dog.html",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 6,
+  "example": false,
+  "icon": "/projects/papercraft-dog.png"
+}

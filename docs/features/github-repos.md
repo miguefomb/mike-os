@@ -1,5 +1,7 @@
 # GitHub: los repositorios públicos de Pol
 
+> **Mike OS, 2026-10-21:** Miguel ha pedido mostrar **todos los repositorios públicos de su perfil**. Se elimina el requisito `showcase` y se incluyen forks y archivados; siguen excluidos los privados y los de otras cuentas. La conversión se llama `toPublicRepos`, se ha actualizado el archivo real con los cinco repositorios y se valida con `src/lib/repos.test.ts` y un recorrido local de la ventana en escritorio y móvil. El texto siguiente conserva las decisiones históricas de Pol OS.
+
 **Estado:** Verificada
 **Requisitos que cierra:** C-01 (redefinido con esta ficha)
 **Fecha de acuerdo:** 2026-10-16

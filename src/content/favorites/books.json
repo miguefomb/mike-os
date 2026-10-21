@@ -3,28 +3,46 @@
   "title": "Libros",
   "items": [
     {
-      "id": "don-quijote",
-      "title": "Don Quijote de la Mancha",
-      "author": "Miguel de Cervantes",
-      "cover": "/favoritos/libros/don-quijote.jpg"
+      "id": "cointeligencia-vivir-y-trabajar-con-la-ia",
+      "title": "Cointeligencia: Vivir y trabajar con la IA",
+      "cover": "/favoritos/libros/cointeligencia-vivir-y-trabajar-con-la-ia.jpg",
+      "author": "Ethan Mollick"
     },
     {
-      "id": "la-regenta",
-      "title": "La Regenta",
-      "author": "Leopoldo Alas «Clarín»",
-      "cover": "/favoritos/libros/la-regenta.jpg"
+      "id": "el-imperio-de-la-ia",
+      "title": "El imperio de la IA",
+      "cover": "/favoritos/libros/el-imperio-de-la-ia.jpg",
+      "author": "Karen Hao"
     },
     {
-      "id": "fortunata-y-jacinta",
-      "title": "Fortunata y Jacinta",
-      "author": "Benito Pérez Galdós",
-      "cover": "/favoritos/libros/fortunata-y-jacinta.jpg"
+      "id": "el-monje-que-vendio-su-ferrari",
+      "title": "El monje que vendió su Ferrari",
+      "cover": "/favoritos/libros/el-monje-que-vendio-su-ferrari.jpg",
+      "author": "Robin Sharma"
     },
     {
-      "id": "platero-y-yo",
-      "title": "Platero y yo",
-      "author": "Juan Ramón Jiménez",
-      "cover": "/favoritos/libros/platero-y-yo.jpg"
+      "id": "harry-potter-saga",
+      "title": "Harry Potter (saga)",
+      "cover": "/favoritos/libros/harry-potter-saga.jpg",
+      "author": "J. K. Rowling"
+    },
+    {
+      "id": "la-hostia-que-viene",
+      "title": "La hostIA que viene",
+      "cover": "/favoritos/libros/la-hostia-que-viene.jpg",
+      "author": "Jon Hernández"
+    },
+    {
+      "id": "padre-rico-padre-pobre",
+      "title": "Padre rico, padre pobre",
+      "cover": "/favoritos/libros/padre-rico-padre-pobre.jpg",
+      "author": "Robert T. Kiyosaki"
+    },
+    {
+      "id": "un-curso-de-milagros",
+      "title": "Un curso de milagros",
+      "cover": "/favoritos/libros/un-curso-de-milagros.jpg",
+      "author": "Fundación para la Paz Interior"
     }
   ]
 }

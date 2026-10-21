@@ -1,0 +1,34 @@
+{
+  "name": "Mikeflix",
+  "domain": "plexmike.netlify.app",
+  "description": "Mi servidor personal de Plex: más de 2.000 películas y más de 300 series.",
+  "summary": "Servidor personal de Plex con +2.000 películas, +300 series y un panel para gestionar la colección.",
+  "details": [
+    "Mikeflix es mi servidor personal de Plex, con más de 2.000 películas y más de 300 series. Un proyecto que une mi afición por el cine con la organización y gestión de una biblioteca multimedia.",
+    "Su panel web permite explorar la colección, buscar títulos y episodios, y filtrar por películas o series, disco, calidad de vídeo y estado de las copias de seguridad. También permite ordenar el catálogo alfabéticamente, por incorporación reciente o por tamaño.",
+    "Los paneles de información reúnen la distribución del almacenamiento por disco, el tamaño medio de películas, series y capítulos, las resoluciones del catálogo y el estado de las copias de seguridad por biblioteca."
+  ],
+  "stack": [
+    "Plex",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Netlify"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/mikeflix/portada.webp",
+      "alt": "Página de Mikeflix con la presentación de su biblioteca multimedia personal y el acceso al catálogo"
+    }
+  ],
+  "colors": {
+    "from": "#394354",
+    "to": "#151b26"
+  },
+  "url": "https://plexmike.netlify.app/",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 7,
+  "example": false,
+  "icon": "/projects/mikeflix.png"
+}

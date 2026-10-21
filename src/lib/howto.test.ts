@@ -107,10 +107,10 @@ describe('src/content/como-esta-hecho.md', () => {
       'Qué es',
       'Tecnologías',
       'Cómo funciona por dentro',
-      'Cómo se actualizan solos los datos',
+      'El contenido y las herramientas',
       'El formulario de Correo y el Libro de visitas',
       'Cómo se trabaja',
-      'Limitaciones: los bloqueos de LaLiga',
+      'Estado local y publicación',
     ]);
   });
 

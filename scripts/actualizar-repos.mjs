@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 /**
- * Actualiza `src/content/repos.json` (la ventana GitHub, C-01) con tus repositorios públicos que llevan el topic `showcase`.
+ * Actualiza `src/content/repos.json` (la ventana GitHub, C-01) con todos tus repositorios públicos.
  *
  * Solo lee la lista pública de repositorios (`GET /users/<tu usuario>/repos`): nunca ve los privados. El token es opcional (sin él, GitHub deja
  * 60 peticiones por hora y aquí se hace una o dos); con `STACK_GITHUB_TOKEN`, `GH_TOKEN` o `GITHUB_TOKEN` no hay límite que preocupe.
- * La lista se rehace entera cada vez: lo que ya no está, o ya no lleva la etiqueta, desaparece.
+ * La lista se rehace entera cada vez: los repositorios borrados o convertidos en privados desaparecen.
  *
  *   node scripts/actualizar-repos.mjs           # actualiza el archivo si hay cambios
  *   node scripts/actualizar-repos.mjs --dry     # solo enseña el resultado
  */
 import { readFileSync, writeFileSync } from 'node:fs';
-import { OWNER, SHOWCASE_TOPIC, sameRepos, toShowcase } from '../src/lib/repos.ts';
+import { OWNER, sameRepos, toPublicRepos } from '../src/lib/repos.ts';
 
 const salida = new URL('../src/content/repos.json', import.meta.url);
 const dry = process.argv.includes('--dry');
@@ -29,9 +29,9 @@ for (let page = 1; ; page++) {
   if (batch.length < 100) break;
 }
 
-const repos = toShowcase(todos);
+const repos = toPublicRepos(todos);
 const datos = { generatedAt: new Date().toISOString().slice(0, 10), repos };
-console.log(`${todos.length} repositorios públicos; ${repos.length} con el topic «${SHOWCASE_TOPIC}»: ${repos.map((r) => r.name).join(', ') || 'ninguno'}.`);
+console.log(`${repos.length} repositorios públicos de ${OWNER}: ${repos.map((r) => r.name).join(', ') || 'ninguno'}.`);
 
 let anterior = null;
 try {

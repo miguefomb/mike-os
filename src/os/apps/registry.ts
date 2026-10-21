@@ -22,7 +22,7 @@ export const APPS: Record<AppId, AppDef> = {
   guestbook: { title: 'Libro de visitas', menu: 'Libro de visitas', width: 560, height: 560 },
   projects: { title: 'Proyectos', menu: 'Proyectos', width: 760, height: 560 },
   stack: { title: 'Stack', menu: 'Stack', width: 620, height: 600 },
-  terminal: { title: 'Terminal — pol@pol-os', menu: 'Terminal', width: 660, height: 420 },
+  terminal: { title: `Terminal — ${PERSONA.terminalUser}`, menu: 'Terminal', width: 660, height: 420 },
   settings: { title: 'Ajustes', menu: 'Ajustes', width: 580, height: 540 },
   help: { title: `Cómo usar ${PERSONA.osName}`, menu: 'Ayuda', width: 520, height: 560 },
   memory: { title: 'Memory', menu: 'Memory', width: 480, height: 600 },

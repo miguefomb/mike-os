@@ -56,3 +56,19 @@ export const MEMORY_NAMES: Readonly<Record<string, string>> = { anthropic: 'Anth
 
 /** Lo que entra en el juego sin estar en el Stack (que cuenta dependencias, no dónde vive el código). */
 export const MEMORY_EXTRAS: readonly { id: string; name: string }[] = [{ id: 'github', name: 'GitHub' }];
+
+/** Herramientas de la web de Miguel y de Mike OS, sin inventar estadísticas de repositorios. */
+export const MEMORY_PROFILE_TOOLS = [
+  { id: 'html-css', name: 'HTML y CSS' },
+  { id: 'javascript', name: 'JavaScript' },
+  { id: 'python', name: 'Python' },
+  { id: 'nextjs', name: 'Next.js' },
+  { id: 'tailwind', name: 'Tailwind CSS' },
+  { id: 'vite', name: 'Vite' },
+  { id: 'claude-code', name: 'Claude Code' },
+  { id: 'vercel', name: 'Vercel' },
+  { id: 'astro', name: 'Astro' },
+  { id: 'svelte', name: 'Svelte' },
+  { id: 'typescript', name: 'TypeScript' },
+  { id: 'cloudflare', name: 'Cloudflare' },
+];

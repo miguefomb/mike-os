@@ -1,5 +1,6 @@
 <script lang="ts">
   import data from '../../../content/stack.json';
+  import skills from '../../../content/skills.json';
   import { CATEGORIES } from '../../../lib/stack-catalog';
   import { barPercent, groupByCategory, summary, type StackData } from '../../../lib/stack';
   import { cumulativeByYear, donutArcs, linePoints } from '../../../lib/stack-charts';
@@ -33,7 +34,23 @@
 <!-- La región se puede enfocar con el teclado para desplazarla con las flechas. -->
 <div class="stack" data-testid="stack" role="region" aria-label="Stack: herramientas que uso" tabindex="0">
   <header>
-    <h2>Stack</h2>
+    <h2>Herramientas y disciplinas</h2>
+    <p class="muted" data-testid="stack-profile-source">Tecnología, imagen y sonido: las herramientas con las que desarrollo mis proyectos.</p>
+  </header>
+  <div data-testid="stack-skills">
+    {#each skills as skill (skill.id)}
+      <section aria-labelledby={`skill-${skill.id}`}>
+        <h3 id={`skill-${skill.id}`}>{skill.title}</h3>
+        <p class="muted">{skill.description}</p>
+        <ul class="skill-tools">
+          {#each skill.tools as tool (tool)}<li>{tool}</li>{/each}
+        </ul>
+      </section>
+    {/each}
+  </div>
+  {#if stack.tools.length > 0}
+  <header>
+    <h2>Actividad en GitHub</h2>
     <p class="muted" data-testid="stack-source">
       Datos a {updated}, de mis repositorios de GitHub ({stack.repos.public} públicos y {stack.repos.private} privados; de estos solo cuento, no enseño
       nombres).
@@ -126,9 +143,24 @@
     Los números cuentan repositorios, y muchos nacieron de un generador, que trae de serie React, Tailwind, Vite, shadcn/ui, Radix, TanStack, Zod y
     ESLint. «Desde» es el año de mi primer repositorio con esa herramienta, nunca anterior a su lanzamiento.
   </p>
+  {/if}
 </div>
 
 <style>
+  .skill-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+  }
+  .skill-tools li {
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-control, 7px);
+    background: var(--surface);
+    font-size: calc(13px * var(--text-scale));
+  }
   .stack {
     height: 100%;
     overflow-y: auto;

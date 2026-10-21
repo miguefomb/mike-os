@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "pol-os-template",
+  "name": "mike-os",
   // No puede ser posterior a la versión de workerd instalada.
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -14,7 +14,7 @@
     "CONTACT_FROM": "contacto@m.example.com",
     // Dirección pública con la que se construye el enlace de confirmación del Libro de visitas (S-09). Mientras la web se
     // publique en *.workers.dev, hay que poner aquí esa dirección; si no, el enlace del correo apuntará a un sitio que no existe.
-    "SITE_URL": "https://example.com"
+    "SITE_URL": "http://localhost:4321"
   },
 
   // El binding solo puede enviar desde esa dirección, aunque el código se equivocara.

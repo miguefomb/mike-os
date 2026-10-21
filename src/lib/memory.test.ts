@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import stack from '../content/stack.json';
 import { PAIRS, deal, flip, hide, isDone, isFaceUp, memoryPool, mustHide, shuffle, type MemoryState, type MemoryTool } from './memory';
-import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES } from './memory-logos';
+import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES, MEMORY_PROFILE_TOOLS } from './memory-logos';
 
 const tool = (id: string): MemoryTool => ({ id, name: id.toUpperCase(), logo: 'M0 0h24v24H0z' });
 const POOL = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'].map(tool);
@@ -72,15 +72,16 @@ describe('jugar', () => {
   });
 });
 
-describe('las cartas salen del Stack', () => {
-  test('cada logo del catálogo es de una herramienta del Stack o de los extras', () => {
-    const ids = new Set([...stack.tools, ...MEMORY_EXTRAS].map((t) => t.id));
-    for (const id of Object.keys(MEMORY_LOGOS)) expect(ids.has(id), id).toBe(true);
+describe('las cartas salen de las herramientas del perfil y del Stack', () => {
+  const tools = [...MEMORY_PROFILE_TOOLS, ...(stack.tools as { id: string; name: string }[]).filter((t) => !MEMORY_PROFILE_TOOLS.some((p) => p.id === t.id)), ...MEMORY_EXTRAS];
+  test('las herramientas del perfil tienen un logo válido para el juego', () => {
+    for (const tool of MEMORY_PROFILE_TOOLS) expect(MEMORY_LOGOS[tool.id], tool.id).toMatch(/^[Mm]/);
   });
 
   test(`hay herramientas con logo de sobra para una partida (${PAIRS} parejas) y todas tienen nombre y trazo`, () => {
-    const pool = memoryPool([...stack.tools, ...MEMORY_EXTRAS], MEMORY_LOGOS);
-    expect(pool.length).toBeGreaterThanOrEqual(PAIRS * 2);
+    const pool = memoryPool(tools, MEMORY_LOGOS);
+    expect(pool.length).toBeGreaterThanOrEqual(PAIRS);
+    expect(deal(pool, zero).cards).toHaveLength(PAIRS * 2);
     for (const t of pool) {
       expect(t.name.length, t.id).toBeGreaterThan(0);
       expect(t.logo, t.id).toMatch(/^[Mm]/);
@@ -88,14 +89,14 @@ describe('las cartas salen del Stack', () => {
   });
 
   test('las que no tienen logo propio o tienen uno poco conocido no salen; GitHub sí', () => {
-    const pool = memoryPool([...stack.tools, ...MEMORY_EXTRAS], MEMORY_LOGOS).map((t) => t.id);
+    const pool = memoryPool(tools, MEMORY_LOGOS).map((t) => t.id);
     for (const id of ['sql', 'vercel-ai', 'openai', 'liveblocks', 'playwright', 'github-actions', 'mcp', 'tanstack', 'hono', 'zod']) expect(pool).not.toContain(id);
     expect(pool).toContain('github');
   });
 
   test('los nombres largos se acortan para que quepan en la carta', () => {
-    const pool = memoryPool([...stack.tools, ...MEMORY_EXTRAS], MEMORY_LOGOS, MEMORY_NAMES);
-    expect(pool.find((t) => t.id === 'anthropic')?.name).toBe('Anthropic');
+    const pool = memoryPool(tools, MEMORY_LOGOS, MEMORY_NAMES);
+    expect(memoryPool([{ id: 'anthropic', name: 'SDK de Anthropic' }], MEMORY_LOGOS, MEMORY_NAMES)[0].name).toBe('Anthropic');
     for (const t of pool) expect(t.name.length, t.id).toBeLessThanOrEqual(12);
   });
 

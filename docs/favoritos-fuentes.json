@@ -1,0 +1,747 @@
+[
+  {
+    "kind": "books",
+    "id": "cointeligencia-vivir-y-trabajar-con-la-ia",
+    "title": "Cointeligencia: Vivir y trabajar con la IA",
+    "image": "https://www.penguinlibros.com/es/4172002-home_default/cointeligencia.jpg",
+    "source": "https://www.penguinlibros.com/es/ciencia-y-tecnologia/348600-libro-cointeligencia-9788418053214",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "el-imperio-de-la-ia",
+    "title": "El imperio de la IA",
+    "image": "https://proassetspdlcom.cdnstatics2.com/usuaris/libros/thumbs/175e648a-d4f5-4565-85a8-bf4fc833b277/d_360_620/portada_el-imperio-de-la-ia_karen-hao_202510271139.webp",
+    "source": "https://www.planetadelibros.com/libro-el-imperio-de-la-ia/428132",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "el-monje-que-vendio-su-ferrari",
+    "title": "El monje que vendió su Ferrari",
+    "image": "https://www.penguinlibros.com/es/2634673-home_default/el-monje-que-vendio-su-ferrari.jpg",
+    "source": "https://www.penguinlibros.com/es/libros-autoayuda/20122-ebook-el-monje-que-vendio-su-ferrari-9788425345388",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "harry-potter-saga",
+    "title": "Harry Potter (saga)",
+    "image": "https://www.penguinlibros.com/es/5630482-home_default/harry-potter-y-la-piedra-filosofal-harry-potter-edicion-clasica-con-la-portada-ilustrada-por-dolores-avendano-1.jpg",
+    "source": "https://www.penguinlibros.com/es/libros-ninos-9-anos/37676-libro-harry-potter-y-la-piedra-filosofal-harry-potter-1-9788478884452",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "la-hostia-que-viene",
+    "title": "La hostIA que viene",
+    "image": "https://proassetspdlcom.cdnstatics2.com/usuaris/libros/thumbs/6f54b513-66b8-4c05-bde0-0477d9cb1337/d_360_620/portada_la-hostia-que-viene_jon-hernandez_202604241010.webp",
+    "source": "https://www.planetadelibros.com/libro-la-hostia-que-viene/448686",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "padre-rico-padre-pobre",
+    "title": "Padre rico, padre pobre",
+    "image": "https://www.penguinlibros.com/es/7295686-home_default/padre-rico-padre-pobre-edicion-actualizada.jpg",
+    "source": "https://www.penguinlibros.com/es/economia-politica-y-actualidad/324279-libro-padre-rico-padre-pobre-edicion-actualizada-9788466373005",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "books",
+    "id": "un-curso-de-milagros",
+    "title": "Un curso de milagros",
+    "image": "http://shop.acim.org/cdn/shop/products/9781883360818.MAIN_1200x1200.jpg?v=1668185919",
+    "source": "https://shop.acim.org/products/spanish",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "dragon-ball",
+    "title": "Dragon Ball",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/DBFZ_cover_art.jpg",
+    "source": "https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ",
+    "description": "2018 2.5D Dragon Ball fighting game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "fifa",
+    "title": "FIFA",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a6/FIFA_23_Cover.jpg",
+    "source": "https://en.wikipedia.org/wiki/FIFA_23",
+    "description": "2022 video game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "forza",
+    "title": "Forza",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/86/Forza_Horizon_5_cover_art.jpg",
+    "source": "https://en.wikipedia.org/wiki/Forza_Horizon_5",
+    "description": "2021 video game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "gta",
+    "title": "GTA",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png",
+    "source": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+    "description": "2013 video game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "minecraft",
+    "title": "Minecraft",
+    "image": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NewKeyArt_Header.jpg",
+    "source": "https://www.minecraft.net/en-us/article/key-art-update",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "need-for-speed",
+    "title": "Need for Speed",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8e/Need_for_Speed_Most_Wanted_Box_Art.jpg",
+    "source": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Most_Wanted_(2005_video_game)",
+    "description": "2005 open world racing game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "pokemon",
+    "title": "Pokémon",
+    "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/af/Pok%C3%A9mon_Red_and_Blue_cover_art.webp/330px-Pok%C3%A9mon_Red_and_Blue_cover_art.webp",
+    "source": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Red%2C_Blue%2C_and_Yellow",
+    "description": "1996 video games",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "games",
+    "id": "spyro",
+    "title": "Spyro",
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/54/Spyro_Reignited_Trilogy.png",
+    "source": "https://en.wikipedia.org/wiki/Spyro_Reignited_Trilogy",
+    "description": "2018 video game compilation",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "8-millas",
+    "title": "8 millas",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1e/8_Mile_official_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/8_Mile_(film)",
+    "description": "2002 film by Curtis Hanson",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "aladdin",
+    "title": "Aladdin",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bd/Aladdin_%281992_Disney_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film)",
+    "description": "1992 animated Disney film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "avatar",
+    "title": "Avatar",
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Avatar_(2009_film)",
+    "description": "2009 film by James Cameron",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "black-mirror",
+    "title": "Black Mirror",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/564/1411764.jpg",
+    "source": "https://www.tvmaze.com/shows/305/black-mirror",
+    "description": "Black Mirror",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "breaking-bad",
+    "title": "Breaking Bad",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg",
+    "source": "https://www.tvmaze.com/shows/169/breaking-bad",
+    "description": "Breaking Bad",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "coco",
+    "title": "Coco",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Coco_(2017_film)",
+    "description": "2017 film by Lee Unkrich",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "como-entrenar-a-tu-dragon",
+    "title": "Cómo entrenar a tu dragón",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/99/How_to_Train_Your_Dragon_Poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)",
+    "description": "2010 film by Chris Sanders and Dean DeBlois",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "contratiempo",
+    "title": "Contratiempo",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/Contratiempo_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Invisible_Guest",
+    "description": "2016 film by Oriol Paulo",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "digimon",
+    "title": "Digimon",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/8/21271.jpg",
+    "source": "https://www.tvmaze.com/shows/1517/digimon-digital-monsters",
+    "description": "Digimon Adventure:",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-caballero-oscuro",
+    "title": "El caballero oscuro",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+    "description": "2008 film by Christopher Nolan",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-club-de-la-lucha",
+    "title": "El club de la lucha",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Fight_Club",
+    "description": "1999 American film by David Fincher",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-codigo-da-vinci",
+    "title": "El código Da Vinci",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e9/The_da_vinci_code_final.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Da_Vinci_Code_(film)",
+    "description": "2006 mystery thriller film by Ron Howard",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-efecto-mariposa",
+    "title": "El efecto mariposa",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/43/Butterflyeffect_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Butterfly_Effect",
+    "description": "2004 American science fiction thriller film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-juego-del-calamar",
+    "title": "El juego del calamar",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/576/1440521.jpg",
+    "source": "https://www.tvmaze.com/shows/43687/squid-game",
+    "description": "Squid Game",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-libro-de-la-selva",
+    "title": "El libro de la selva",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/Thejunglebook_movieposter.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Jungle_Book_(1967_film)",
+    "description": "1967 animated Disney film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-libro-de-la-vida",
+    "title": "El libro de la vida",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/61/The_Book_of_Life_%282014_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Book_of_Life_(2014_film)",
+    "description": "2014 film by Jorge R. Gutierrez",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-planeta-del-tesoro",
+    "title": "El planeta del tesoro",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/7e/Treasure_Planet_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Treasure_Planet",
+    "description": "2002 animated Disney film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-rey-leon",
+    "title": "El rey león",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Lion_King",
+    "description": "1994 American animated film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "el-senor-de-los-anillos",
+    "title": "El señor de los anillos",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg",
+    "source": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings%3A_The_Fellowship_of_the_Ring",
+    "description": "2001 film by Peter Jackson",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "harry-potter",
+    "title": "Harry Potter",
+    "image": "https://media.fathomentertainment.com/image/826249444369/image_vigd4b6lh97hd0uns3pfgcd57g/-S1200-Fwebp",
+    "source": "https://www.fathomentertainment.com/releases/harry-potter-and-the-philosophers-stone/media-kit/",
+    "description": "2001 film by Chris Columbus",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "hercules",
+    "title": "Hércules",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/65/Hercules_%281997_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Hercules_(1997_film)",
+    "description": "American animated musical fantasy film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "inside-out",
+    "title": "Inside Out",
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/0a/Inside_Out_%282015_film%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Inside_Out",
+    "description": "2015 film by Pete Docter",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "interstellar",
+    "title": "Interstellar",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Interstellar_(film)",
+    "description": "2014 film by Christopher Nolan",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "juego-de-tronos",
+    "title": "Juego de Tronos",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/498/1245274.jpg",
+    "source": "https://www.tvmaze.com/shows/82/game-of-thrones",
+    "description": "Game of Thrones",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "la-casa-de-papel",
+    "title": "La casa de papel",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/376/940830.jpg",
+    "source": "https://www.tvmaze.com/shows/27436/la-casa-de-papel",
+    "description": "La Casa de Papel",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "la-espada-magica-en-busca-de-camelot",
+    "title": "La espada mágica (En busca de Camelot)",
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/38/Quest_for_Camelot-_Poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Quest_for_Camelot",
+    "description": "1998 American animated film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "lilo-stitch",
+    "title": "Lilo & Stitch",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/LiloandStitchmovieposter.jpg",
+    "source": "https://en.wikipedia.org/wiki/Lilo_%26_Stitch",
+    "description": "2002 Disney animated film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "luces-rojas",
+    "title": "Luces rojas",
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/20/Red_Lights_FilmPoster.jpeg",
+    "source": "https://en.wikipedia.org/wiki/Red_Lights_(2012_film)",
+    "description": "2012 film by Rodrigo Cortés",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "matrix",
+    "title": "Matrix",
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png",
+    "source": "https://en.wikipedia.org/wiki/The_Matrix",
+    "description": "1999 film by the Wachowskis",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "memento",
+    "title": "Memento",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c7/Memento_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Memento_(film)",
+    "description": "2000 film by Christopher Nolan",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "mindscape",
+    "title": "Mindscape",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c9/Mindscape.jpg",
+    "source": "https://en.wikipedia.org/wiki/Mindscape_(2013_film)",
+    "description": "2013 film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "mulan",
+    "title": "Mulán",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a3/Movie_poster_mulan.JPG",
+    "source": "https://en.wikipedia.org/wiki/Mulan_(1998_film)",
+    "description": "American animated film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "oldboy",
+    "title": "Oldboy",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/67/Oldboykoreanposter.jpg",
+    "source": "https://en.wikipedia.org/wiki/Oldboy_(2003_film)",
+    "description": "2003 South Korean film by Park Chan-wook",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "origen",
+    "title": "Origen",
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Inception",
+    "description": "2010 film by Christopher Nolan",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "piratas-del-caribe",
+    "title": "Piratas del Caribe",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+    "source": "https://en.wikipedia.org/wiki/Pirates_of_the_Caribbean%3A_The_Curse_of_the_Black_Pearl",
+    "description": "2003 film by Gore Verbinski",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "rick-morty",
+    "title": "Rick & Morty",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/626/1566363.jpg",
+    "source": "https://www.tvmaze.com/shows/216/rick-and-morty",
+    "description": "Rick and Morty",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "seven",
+    "title": "Seven",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Seven_(1995_film)",
+    "description": "1995 film by David Fincher",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "shrek",
+    "title": "Shrek",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/7b/Shrek_%282001_animated_feature_film%29.jpg",
+    "source": "https://en.wikipedia.org/wiki/Shrek",
+    "description": "2001 DreamWorks Animation film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "shutter-island",
+    "title": "Shutter Island",
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/76/Shutterislandposter.jpg",
+    "source": "https://en.wikipedia.org/wiki/Shutter_Island_(film)",
+    "description": "2010 American film by Martin Scorsese",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "space-jam",
+    "title": "Space Jam",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/14/Space_jam.jpg",
+    "source": "https://en.wikipedia.org/wiki/Space_Jam",
+    "description": "1996 film by Joe Pytka",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "stranger-things",
+    "title": "Stranger Things",
+    "image": "https://static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg",
+    "source": "https://www.tvmaze.com/shows/2993/stranger-things",
+    "description": "Stranger Things",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "toy-story",
+    "title": "Toy Story",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
+    "source": "https://en.wikipedia.org/wiki/Toy_Story",
+    "description": "1995 film by John Lasseter",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "trainspotting",
+    "title": "Trainspotting",
+    "image": "https://www.miramax.com/assets/Trainspotting2.png",
+    "source": "https://www.miramax.com/movie/trainspotting/",
+    "description": "1996 British film by Danny Boyle",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "movies",
+    "id": "vaiana",
+    "title": "Vaiana",
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg",
+    "source": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
+    "description": "2016 animated Disney film",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "aespa",
+    "title": "aespa",
+    "image": "https://cdn-images.dzcdn.net/images/artist/c963d7469a999feb764ad6f16c31dd74/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/113547672",
+    "description": "aespa",
+    "artistId": 113547672,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "alejandro-sanz",
+    "title": "Alejandro Sanz",
+    "image": "https://cdn-images.dzcdn.net/images/artist/008bc5d5b4c0d0bcd8181360ece1bc74/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/4479",
+    "description": "Alejandro Sanz",
+    "artistId": 4479,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "alex-ubago",
+    "title": "Álex Ubago",
+    "image": "https://cdn-images.dzcdn.net/images/artist/a1c39102c5b234a518462f2e71cc55a6/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/5653",
+    "description": "Álex Ubago",
+    "artistId": 5653,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "cocco-lexa",
+    "title": "Cocco Lexa",
+    "image": "https://image-cdn-fa.spotifycdn.com/image/ab67616100005174e4a23c0f3a9ac76128bf7a8a",
+    "source": "https://open.spotify.com/artist/5WMoWNq8DuL9pob4qu7mau",
+    "description": "Cocco Lexa",
+    "artistId": 111153702,
+    "profile": "https://www.deezer.com/artist/111153702",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "duki",
+    "title": "Duki",
+    "image": "https://cdn-images.dzcdn.net/images/artist/795d09a17bc833425e4b88639bb931af/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/4902904",
+    "description": "DUKI",
+    "artistId": 4902904,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "eladio-carrion",
+    "title": "Eladio Carrión",
+    "image": "https://cdn-images.dzcdn.net/images/artist/98a7d648d71fca1e24ecd3b48866b017/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/8613614",
+    "description": "Eladio Carrion",
+    "artistId": 8613614,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "eminem",
+    "title": "Eminem",
+    "image": "https://cdn-images.dzcdn.net/images/artist/0f30bbd33a680030054af004d698d6ac/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/13",
+    "description": "Eminem",
+    "artistId": 13,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "estopa",
+    "title": "Estopa",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Estopa_2008.06.13_007.jpg/330px-Estopa_2008.06.13_007.jpg",
+    "source": "https://en.wikipedia.org/wiki/Estopa",
+    "description": "Estopa",
+    "artistId": 4474,
+    "profile": "https://www.deezer.com/artist/4474",
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "fondo-flamenco",
+    "title": "Fondo Flamenco",
+    "image": "https://cdn-images.dzcdn.net/images/artist/b162fb3e2f33a630be0699e40e231b07/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/153422",
+    "description": "Fondo Flamenco",
+    "artistId": 153422,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "iann-dior",
+    "title": "iann dior",
+    "image": "https://cdn-images.dzcdn.net/images/artist/0342a66e5de4b9b5502726badd0b8a17/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/59936352",
+    "description": "Iann Dior",
+    "artistId": 59936352,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "juan-luis-guerra",
+    "title": "Juan Luis Guerra",
+    "image": "https://cdn-images.dzcdn.net/images/artist/e494d60d12760b374c7abde63028559f/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/4527779",
+    "description": "Juan Luis Guerra",
+    "artistId": 4527779,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "le-sserafim",
+    "title": "LE SSERAFIM",
+    "image": "https://cdn-images.dzcdn.net/images/artist/e789ab2d16cad9a738cd83722940512b/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/168158797",
+    "description": "LE SSERAFIM",
+    "artistId": 168158797,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "melendi",
+    "title": "Melendi",
+    "image": "https://cdn-images.dzcdn.net/images/artist/e2416523f51a9033651377f9388af329/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/2697",
+    "description": "Melendi",
+    "artistId": 2697,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "michael-jackson",
+    "title": "Michael Jackson",
+    "image": "https://cdn-images.dzcdn.net/images/artist/97fae13b2b30e4aec2e8c9e0c7839d92/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/259",
+    "description": "Michael Jackson",
+    "artistId": 259,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "myke-towers",
+    "title": "Myke Towers",
+    "image": "https://cdn-images.dzcdn.net/images/artist/d3a7418b4e44bf8ee3ae268067a86f09/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/12029862",
+    "description": "Myke Towers",
+    "artistId": 12029862,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "plan-b",
+    "title": "Plan B",
+    "image": "https://cdn-images.dzcdn.net/images/artist/b6ff20889f2ec45154ccaee509cf508b/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/65838",
+    "description": "Plan B",
+    "artistId": 65838,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "quevedo",
+    "title": "Quevedo",
+    "image": "https://cdn-images.dzcdn.net/images/artist/79880cc1b999b15567e332203464c34e/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/6705223",
+    "description": "Quevedo",
+    "artistId": 6705223,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "raul-clyde",
+    "title": "Raul Clyde",
+    "image": "https://cdn-images.dzcdn.net/images/artist/8677830bc977268ae58c003be2d9ebeb/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/102152692",
+    "description": "Raul Clyde",
+    "artistId": 102152692,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "rels-b",
+    "title": "Rels B",
+    "image": "https://cdn-images.dzcdn.net/images/artist/d504648fd4842cfa7c89d9f835dac4e8/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/10580067",
+    "description": "Rels B",
+    "artistId": 10580067,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "smash-mouth",
+    "title": "Smash Mouth",
+    "image": "https://cdn-images.dzcdn.net/images/artist/74407908e9abe8d44943ecd52b024baa/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/1179",
+    "description": "Smash Mouth",
+    "artistId": 1179,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "stromae",
+    "title": "Stromae",
+    "image": "https://cdn-images.dzcdn.net/images/artist/3634186855460543a9476870a912a31a/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/310260",
+    "description": "Stromae",
+    "artistId": 310260,
+    "retrievedAt": "2026-10-21"
+  },
+  {
+    "kind": "music",
+    "id": "twista",
+    "title": "Twista",
+    "image": "https://cdn-images.dzcdn.net/images/artist/85542e5011a75061eb0849912546b45a/500x500-000000-80-0-0.jpg",
+    "source": "https://www.deezer.com/artist/298",
+    "description": "Twista",
+    "artistId": 298,
+    "retrievedAt": "2026-10-21"
+  }
+]

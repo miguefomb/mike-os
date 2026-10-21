@@ -1,5 +1,5 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative, sep } from 'node:path';
 import { describe, expect, test } from 'vitest';
 
 // La isla del escritorio (src/os) se ejecuta en el navegador, donde no existen los módulos de Node. Un solo import de
@@ -12,7 +12,7 @@ const walk = (dir: string): string[] =>
   });
 
 const lib = walk(join(root, 'src/lib')).filter((f) => /\.ts$/.test(f) && !/\.test\.ts$/.test(f));
-const nodeOnly = lib.filter((f) => /from ['"]node:/.test(readFileSync(f, 'utf8'))).map((f) => f.replace(/^.*\/src\/lib\//, '').replace(/\.ts$/, ''));
+const nodeOnly = lib.filter((f) => /from ['"]node:/.test(readFileSync(f, 'utf8'))).map((f) => relative(join(root, 'src/lib'), f).split(sep).join('/').replace(/\.ts$/, ''));
 const browserCode = walk(join(root, 'src/os')).filter((f) => /\.(ts|svelte)$/.test(f) && !/\.test\.ts$/.test(f));
 
 describe('código del navegador', () => {

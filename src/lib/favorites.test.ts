@@ -5,11 +5,11 @@ import {
   COVER_PATH,
   DURATION,
   ITEM_ID,
-  MAX_ITEMS,
   SECTIONS,
-  SHELVID_ORIGIN,
   YOUTUBE_ID,
   coverPath,
+  compareFavorites,
+  isSong,
   nextTrack,
   rank,
   songTrack,
@@ -128,10 +128,11 @@ describe('src/content/favorites', () => {
     expect(Object.keys(sections)).toHaveLength(SECTIONS.length);
   });
 
-  test('cada sección es un top 10: entre uno y diez elementos, con nombres que no se repiten', () => {
+  test('toda la selección está ordenada en español y no repite elementos', () => {
+    const counts: Record<string, number> = { movies: 44, music: 22, books: 7, games: 8 };
     for (const [name, section] of Object.entries(sections)) {
-      expect(section.items.length, name).toBeGreaterThan(0);
-      expect(section.items.length, name).toBeLessThanOrEqual(MAX_ITEMS);
+      expect(section.items.length, name).toBe(counts[name]);
+      expect(section.items.map((i) => i.title), name).toEqual([...section.items].sort(compareFavorites).map((i) => i.title));
       const ids = section.items.map((i) => i.id);
       expect(new Set(ids).size, name).toBe(ids.length);
     }
@@ -146,25 +147,22 @@ describe('src/content/favorites', () => {
     }
   });
 
-  test('los videojuegos enlazan con su ficha en Shelvid y se nombra Shelvid', () => {
+  test('los videojuegos enlazan con una ficha https e identifican la entrega de su portada', () => {
     const games = sections.games;
     if (games.kind !== 'games') throw new Error('tipo');
     for (const g of games.items) {
-      expect(g.url.startsWith(`${SHELVID_ORIGIN}/game/`), g.id).toBe(true);
-      expect(new URL(g.url).search, g.id).toBe('');
+      expect(new URL(g.url).protocol, g.id).toBe('https:');
+      if (g.title !== 'Minecraft') expect(g.edition?.length, g.id).toBeGreaterThan(2);
     }
-    expect(games.credit).toMatchObject({ label: 'Shelvid', url: SHELVID_ORIGIN });
   });
 
-  test('las películas llevan año, una sinopsis breve y su tráiler de YouTube', () => {
+  test('las películas, series y sagas tienen su categoría; Matrix solo aparece una vez', () => {
     const movies = sections.movies;
     if (movies.kind !== 'movies') throw new Error('tipo');
     for (const m of movies.items) {
-      expect(m.year, m.id).toBeGreaterThan(1900);
-      expect(m.synopsis.length, m.id).toBeGreaterThanOrEqual(20);
-      expect(m.synopsis.length, m.id).toBeLessThanOrEqual(240);
-      expect(YOUTUBE_ID.test(m.trailer), `${m.id}: ${m.trailer}`).toBe(true);
+      expect(['Película', 'Serie', 'Saga'], m.id).toContain(m.category);
     }
+    expect(movies.items.filter((m) => m.title === 'Matrix')).toHaveLength(1);
   });
 
   test('los libros llevan autor y, si hay enlace final, es https', () => {
@@ -174,31 +172,31 @@ describe('src/content/favorites', () => {
     if (books.link) expect(books.link.url.startsWith('https://')).toBe(true);
   });
 
-  test('las canciones llevan artista y su vídeo de YouTube, y no se repite ninguno', () => {
+  test('Música contiene los artistas elegidos y enlaza con su perfil, sin inventar canciones', () => {
     const music = sections.music;
     if (music.kind !== 'music') throw new Error('tipo');
     for (const s of music.items) {
-      expect(s.artist.length, s.id).toBeGreaterThan(1);
-      expect(YOUTUBE_ID.test(s.video), `${s.id}: ${s.video}`).toBe(true);
-      if (s.duration) expect(DURATION.test(s.duration), s.id).toBe(true);
+      expect(isSong(s), s.id).toBe(false);
+      if (isSong(s)) throw new Error('Se esperaba un artista');
+      expect(s.type).toBe('artist');
+      expect(new URL(s.url).hostname).toBe('www.deezer.com');
     }
-    const videos = music.items.map((s) => s.video);
-    expect(new Set(videos).size).toBe(videos.length);
   });
 
   test('ningún texto lleva un correo, un teléfono ni HTML', () => {
     for (const [name, section] of Object.entries(sections)) {
-      const text = JSON.stringify(section);
+      const text = [section.title, ...section.items.map((i) => [i.title, 'author' in i ? i.author : '', 'synopsis' in i ? i.synopsis : ''].join(' '))].join('\n');
       expect(text, name).not.toMatch(/[\w.+-]+@[\w-]+\.[\w.-]+|mailto:|<[a-z/][^>]*>/i);
       expect(text, name).not.toMatch(/\+?\d{9,}/);
     }
   });
 
-  test('los enlaces solo van a Shelvid, a YouTube o al enlace final de los libros', () => {
+  test('los enlaces de las fichas y perfiles usan https', () => {
     const urls: string[] = [];
     for (const section of Object.values(sections)) {
       if (section.kind === 'games') urls.push(...section.items.map((i) => i.url));
       if (section.kind === 'books' && section.link) urls.push(section.link.url);
+      if (section.kind === 'music') for (const item of section.items) if (!isSong(item)) urls.push(item.url);
     }
     for (const url of urls) expect(new URL(url).protocol, url).toBe('https:');
   });

@@ -63,7 +63,9 @@
     <!-- La región se puede enfocar con el teclado para desplazarla con las flechas, aunque no tenga controles dentro. -->
     <div class="scroll" class:with-player={player.current !== null} role="region" aria-label={section.title} tabindex="0">
       <h2 data-testid="favorites-title">{section.title}</h2>
-      {#if section.kind === 'music'}
+      {#if section.items.length === 0}
+        <p class="status" data-testid="favorites-empty">Todavía no hay favoritos en esta sección.</p>
+      {:else if section.kind === 'music'}
         <MusicList {section} />
       {:else}
         <CoverGrid {section} />
@@ -83,7 +85,7 @@
                 {/each}
               </span>
               <span class="name">{s.label}</span>
-              <span class="sub">Top {data?.items.length ?? 0}</span>
+              <span class="sub">{data?.items.length ? `${data.items.length} favoritos · A–Z` : 'Sin favoritos todavía'}</span>
             </button>
           </li>
         {/each}

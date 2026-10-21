@@ -1,31 +1,32 @@
 {
-  "name": "Álex OS",
-  "domain": "example.com",
-  "description": "Este portfolio: un sistema operativo de escritorio dentro del navegador.",
-  "summary": "Este portfolio: un sistema operativo de escritorio dentro del navegador.",
+  "name": "Mike OS",
+  "domain": "migueos.vercel.app",
+  "description": "Mi portfolio como escritorio: IA, automatización, cine y música en un mismo lugar.",
+  "summary": "Mi portfolio como escritorio: tecnología y creatividad, ventana a ventana.",
   "details": [
-    "Un escritorio con ventanas, dock, Terminal y apps: cada parte del trabajo de su autor es algo que se abre.",
-    "Está hecho con Astro, Svelte y Cloudflare, y se publica a partir de una plantilla abierta. En «Cómo está hecho» se explica por dentro."
+    "Mi portfolio personal, adaptado de la plantilla abierta pol-os-template de Pol Marzà. Reúne mi perfil, proyectos digitales, trabajo audiovisual y recursos de IA.",
+    "Astro genera el contenido y Svelte da vida a las ventanas, el dock y las apps. El portfolio se prepara para Vercel y su código público está en GitHub. Los formularios requieren configurar los servicios de correo y protección antes de habilitar los envíos."
   ],
   "stack": [
     "Astro",
     "Svelte",
     "TypeScript",
-    "Cloudflare"
+    "Vercel"
   ],
   "screenshots": [
     {
       "src": "/projects/este-portfolio/escritorio.webp",
-      "alt": "El escritorio: iconos a la derecha, el dock abajo y la barra de menú arriba"
+      "alt": "El escritorio de Mike OS con los proyectos y enlaces de Miguel Fombuena"
     }
   ],
   "colors": {
     "from": "#8a6dff",
     "to": "#3d2bd1"
   },
-  "url": "https://example.com",
+  "url": "/",
   "embeddable": false,
   "howto": true,
-  "order": 4,
-  "example": true
+  "order": 8,
+  "example": false,
+  "icon": "/projects/este-portfolio.png"
 }

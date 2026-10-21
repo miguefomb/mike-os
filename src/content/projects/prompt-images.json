@@ -1,0 +1,34 @@
+{
+  "name": "Prompt Images",
+  "domain": "madmikeprods.vercel.app/ia/prompt-images.html",
+  "description": "21 imágenes y 24 prompts para explorar y reutilizar estilos visuales.",
+  "summary": "21 imágenes y 24 prompts para explorar y reutilizar estilos visuales.",
+  "details": [
+    "Galería de referencias visuales para generación de imágenes con IA. Cada tarjeta permite abrir la imagen, leer su prompt completo y copiarlo.",
+    "Reúne 21 imágenes y 24 prompts: retratos, ilustración, carteles, composiciones de producto y transformaciones de estilo.",
+    "Los prompts siguen disponibles con JavaScript desactivado. La galería usa imágenes WebP con miniaturas y versiones ampliadas."
+  ],
+  "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "WebP",
+    "Prompts de imagen"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/prompt-images/portada.webp",
+      "alt": "Avatar 3D de la galería Prompt Images"
+    }
+  ],
+  "colors": {
+    "from": "#ebad53",
+    "to": "#b36b24"
+  },
+  "url": "https://madmikeprods.vercel.app/ia/prompt-images.html",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 4,
+  "example": false,
+  "icon": "/projects/prompt-images.png"
+}

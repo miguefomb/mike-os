@@ -1,18 +1,27 @@
 <script lang="ts">
   import { UI_SVG } from '../../icons';
   import { PLAYER_SVG } from '../../shell/player-icons';
-  import { rank, songTrack, songUrl, type MusicSection } from '../../../lib/favorites';
+  import { isSong, rank, songTrack, songUrl, type MusicSection } from '../../../lib/favorites';
   import { player } from '../../stores/player.svelte';
 
   // La música (S-03) como una lista, con el aspecto de una biblioteca: portada, título, artista, duración y un botón de play.
   let { section }: { section: MusicSection } = $props();
 
-  const queue = $derived(section.items.map(songTrack));
+  const queue = $derived(section.items.filter(isSong).map(songTrack));
+  const artistsOnly = $derived(section.items.every((item) => !isSong(item)));
 </script>
 
-<ol class="list" data-testid="favorites-list-music">
+<ol class="list" class:artists={artistsOnly} data-testid="favorites-list-music">
   {#each section.items as song, i (song.id)}
-    {@const track = queue[i]}
+    {#if !isSong(song)}
+      <li data-testid={`favorites-item-${song.id}`}>
+        <a class="artist-card" href={song.url} target="_blank" rel="noopener noreferrer" aria-label={`${song.title}: escuchar en Deezer (pestaña nueva)`}>
+          <img src={song.cover} alt="" loading="lazy" />
+          <span>{song.title}</span>
+        </a>
+      </li>
+    {:else}
+    {@const track = songTrack(song)}
     {@const current = player.current?.id === track.id}
     <li class="row" class:playing={current} data-testid={`favorites-item-${song.id}`} aria-current={current ? 'true' : undefined}>
       <span class="num" aria-hidden="true">{rank(i)}</span>
@@ -35,10 +44,35 @@
         <span aria-hidden="true">{@html current ? PLAYER_SVG.sound : UI_SVG.play}</span>
       </button>
     </li>
+    {/if}
   {/each}
 </ol>
 
 <style>
+  .list.artists {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 18px 14px;
+  }
+  .artist-card {
+    display: grid;
+    align-content: start;
+    gap: 9px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: calc(14px * var(--text-scale));
+  }
+  .artist-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--hover);
+    box-shadow: 0 0 0 1px var(--line);
+  }
+  .artist-card:hover img { filter: brightness(1.08); }
+  .artist-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 10px; }
   .list {
     display: grid;
     gap: 2px;

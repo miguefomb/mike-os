@@ -11,13 +11,19 @@ describe('texto de Sobre mí', () => {
   const { data, body } = splitFrontmatter(markdown);
 
   test('tiene la línea de presentación y el gancho', () => {
-    expect(data.tagline).toBe('Diseño y construyo productos digitales, con IA y con método.');
-    expect(data.hook).toMatch(/^Este CV es de ejemplo\./);
+    expect(data.tagline).toBe('IA, automatización y producción audiovisual.');
+    expect(data.hook).toContain('Del frame al beat.');
+    expect(body).toContain('Miguel Fombuena Llorens');
+    expect(body).toContain('Mad Mike Prods');
+    for (const name of ['Cámara Valencia', 'Vitelsa', '7 Televalencia', 'Ajuntament de Llíria', 'IES Marxadella', 'IES Henri Matisse', 'IES Laurona', 'BIG school']) expect(body).toContain(name);
+    expect(body).toContain('Febrero de 2025 - Actualidad');
+    expect(body).toContain('**Inglés:** B1');
+    expect(markdown).not.toContain('Este CV es de ejemplo');
   });
 
   test('tiene todas las secciones acordadas, en orden', () => {
     const headings = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1]);
-    expect(headings).toEqual(['De dónde vengo', 'Cómo trabajo', 'Ahora mismo', 'Proyectos', 'Qué busco', 'Datos']);
+    expect(headings).toEqual(['Perfil profesional', 'Experiencia profesional', 'Formación académica', 'Certificaciones', 'Herramientas y competencias', 'Cómo trabajo', 'Proyectos y recursos', 'Idiomas y contacto']);
   });
 
   test('no publica ninguna dirección de correo', () => {
@@ -69,6 +75,9 @@ describe('utilidades', () => {
   test('splitFrontmatter separa los datos del texto, y sin bloque devuelve todo como texto', () => {
     expect(splitFrontmatter('---\na: uno\nb: dos: tres\n---\n\nHola')).toEqual({ data: { a: 'uno', b: 'dos: tres' }, body: '\nHola' });
     expect(splitFrontmatter('Hola')).toEqual({ data: {}, body: 'Hola' });
+    expect(splitFrontmatter('---\r\ntagline: Una línea\r\nhook: Un gancho\r\n---\r\n\r\n## Mi trayectoria\r\nTexto')).toEqual({
+      data: { tagline: 'Una línea', hook: 'Un gancho' }, body: '\n## Mi trayectoria\nTexto',
+    });
   });
 
   test('los enlaces https se abren en pestaña nueva y los de apps no se tocan', () => {

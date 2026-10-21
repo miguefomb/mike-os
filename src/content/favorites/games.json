@@ -1,38 +1,61 @@
 {
   "kind": "games",
   "title": "Videojuegos",
-  "credit": {
-    "label": "Shelvid",
-    "url": "https://www.shelvid.com"
-  },
   "items": [
     {
-      "id": "celeste",
-      "title": "Celeste",
-      "year": 2018,
-      "cover": "/favoritos/juegos/celeste.jpg",
-      "url": "https://www.shelvid.com/game/celeste"
+      "id": "dragon-ball",
+      "title": "Dragon Ball",
+      "cover": "/favoritos/juegos/dragon-ball.jpg",
+      "url": "https://en.wikipedia.org/wiki/Dragon_Ball_FighterZ",
+      "edition": "Dragon Ball FighterZ"
     },
     {
-      "id": "stardew-valley",
-      "title": "Stardew Valley",
-      "year": 2016,
-      "cover": "/favoritos/juegos/stardew-valley.jpg",
-      "url": "https://www.shelvid.com/game/stardew-valley"
+      "id": "fifa",
+      "title": "FIFA",
+      "cover": "/favoritos/juegos/fifa.jpg",
+      "url": "https://en.wikipedia.org/wiki/FIFA_23",
+      "edition": "FIFA 23"
     },
     {
-      "id": "portal-2",
-      "title": "Portal 2",
-      "year": 2011,
-      "cover": "/favoritos/juegos/portal-2.jpg",
-      "url": "https://www.shelvid.com/game/portal-2"
+      "id": "forza",
+      "title": "Forza",
+      "cover": "/favoritos/juegos/forza.jpg",
+      "url": "https://en.wikipedia.org/wiki/Forza_Horizon_5",
+      "edition": "Forza Horizon 5"
     },
     {
-      "id": "hollow-knight",
-      "title": "Hollow Knight",
-      "year": 2017,
-      "cover": "/favoritos/juegos/hollow-knight.jpg",
-      "url": "https://www.shelvid.com/game/hollow-knight"
+      "id": "gta",
+      "title": "GTA",
+      "cover": "/favoritos/juegos/gta.jpg",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+      "edition": "Grand Theft Auto V"
+    },
+    {
+      "id": "minecraft",
+      "title": "Minecraft",
+      "cover": "/favoritos/juegos/minecraft.jpg",
+      "url": "https://www.minecraft.net/en-us/article/key-art-update"
+    },
+    {
+      "id": "need-for-speed",
+      "title": "Need for Speed",
+      "cover": "/favoritos/juegos/need-for-speed.jpg",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed%3A_Most_Wanted_(2005_video_game)",
+      "edition": "Most Wanted (2005)"
+    },
+    {
+      "id": "pokemon",
+      "title": "Pokémon",
+      "cover": "/favoritos/juegos/pokemon.jpg",
+      "url": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Red%2C_Blue%2C_and_Yellow",
+      "edition": "Pokémon Rojo, Azul y Amarillo"
+    },
+    {
+      "id": "spyro",
+      "title": "Spyro",
+      "cover": "/favoritos/juegos/spyro.jpg",
+      "url": "https://en.wikipedia.org/wiki/Spyro_Reignited_Trilogy",
+      "edition": "Reignited Trilogy"
     }
   ]
 }

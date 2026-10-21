@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://migueos.vercel.app/sitemap.xml

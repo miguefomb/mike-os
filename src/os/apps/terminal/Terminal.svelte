@@ -9,7 +9,7 @@
 
   let { projects, notes }: { projects: ProjectData[]; notes: NoteData[] } = $props();
 
-  const PROMPT = 'pol@pol-os ~ %';
+  const PROMPT = `${PERSONA.terminalUser} ~ %`;
   const WELCOME: Line[] = [[{ text: `${PERSONA.osName} 1.0 · escribe help para ver los comandos.`, tone: 'muted' }]];
 
   interface Row {

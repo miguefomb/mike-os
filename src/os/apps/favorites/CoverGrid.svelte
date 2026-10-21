@@ -3,35 +3,39 @@
   import { SECTIONS, trailerTrack, type BooksSection, type GamesSection, type MoviesSection } from '../../../lib/favorites';
   import { player } from '../../stores/player.svelte';
 
-  // Las secciones de portadas (S-03): videojuegos, películas y series y libros. Cada una es una cuadrícula del top 10.
+  // Portadas de videojuegos, películas, series y libros.
   let { section }: { section: GamesSection | MoviesSection | BooksSection } = $props();
 
   const aspect = $derived(SECTIONS.find((s) => s.id === section.kind)!.aspect);
 </script>
 
-<ol class="grid" class:wide={section.kind === 'movies'} data-testid={`favorites-grid-${section.kind}`} style:--aspect={aspect}>
+<ol class="grid" data-testid={`favorites-grid-${section.kind}`} style:--aspect={aspect}>
   {#if section.kind === 'games'}
     {#each section.items as game (game.id)}
       <li data-testid={`favorites-item-${game.id}`}>
-        <a class="card" href={game.url} target="_blank" rel="noopener noreferrer" aria-label={`${game.title}, en Shelvid (se abre en una pestaña nueva)`}>
+        <a class="card" href={game.url} target="_blank" rel="noopener noreferrer" aria-label={`${game.title}: ver ficha (se abre en una pestaña nueva)`}>
           <img class="cover" src={game.cover} alt="" loading="lazy" />
           <span class="name">{game.title}</span>
           {#if game.year}<span class="sub">{game.year}</span>{/if}
+          {#if game.edition}<span class="sub">Portada: {game.edition}</span>{/if}
         </a>
       </li>
     {/each}
   {:else if section.kind === 'movies'}
     {#each section.items as movie (movie.id)}
       <li data-testid={`favorites-item-${movie.id}`}>
-        <article class="card movie">
+        <article class="card">
           <img class="cover" src={movie.cover} alt="" loading="lazy" />
           <div class="body">
             <h3 class="name">{movie.title}</h3>
-            <span class="sub">{movie.year}</span>
-            <p class="synopsis">{movie.synopsis}</p>
+            {#if movie.category}<span class="sub">{movie.category}</span>{/if}
+            {#if movie.year}<span class="sub">{movie.year}</span>{/if}
+            {#if movie.synopsis}<p class="synopsis">{movie.synopsis}</p>{/if}
+            {#if movie.trailer}
             <button class="trailer" data-testid={`favorites-trailer-${movie.id}`} onclick={() => player.play(trailerTrack(movie))}>
               <span aria-hidden="true">{@html UI_SVG.play}</span> Ver tráiler
             </button>
+            {/if}
           </div>
         </article>
       </li>
@@ -69,9 +73,6 @@
     padding: 0;
     list-style: none;
   }
-  .grid.wide {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
   .card {
     display: grid;
     align-content: start;
@@ -106,18 +107,10 @@
     font-size: calc(13px * var(--text-scale));
     color: var(--muted);
   }
-  .movie {
-    grid-template-columns: 96px 1fr;
-    gap: 12px;
-    align-items: start;
-  }
-  .movie .body {
+  .body {
     display: grid;
     gap: 3px;
     justify-items: start;
-  }
-  .movie .name {
-    margin-top: 0;
   }
   .synopsis {
     margin: 4px 0 6px;

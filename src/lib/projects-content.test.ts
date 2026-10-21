@@ -48,7 +48,8 @@ describe('proyectos de src/content/projects', () => {
   });
 
   test('cada icono propio existe en public/projects', () => {
-    for (const p of projects.filter((x) => x.icon)) {
+    for (const p of projects) {
+      expect(p.icon, `${p.id}: cada proyecto necesita su icono propio`).toMatch(/^\/projects\/[a-z0-9-]+\.png$/);
       expect(existsSync(join(process.cwd(), 'public', p.icon!)), `${p.id}: ${p.icon}`).toBe(true);
     }
   });
@@ -97,12 +98,12 @@ describe('proyectos de src/content/projects', () => {
 });
 
 describe('accesos directos de src/content/links.ts', () => {
-  test('WhatsApp abre una conversación con un número con prefijo de país y no cuenta como perfil público', () => {
-    const wa = LINKS.find((l) => l.id === 'whatsapp')!;
-    expect(wa.url).toMatch(/^https:\/\/wa\.me\/\d{9,15}(\?text=[^&\s]+)?$/);
-    expect(new URL(wa.url).searchParams.get('text')).toBe('Hola, te escribo desde tu portfolio.');
-    expect(wa.profile).toBe(false);
-    expect(PROFILE_LINKS.map((l) => l.id)).toEqual(['newsletter', 'github', 'linkedin']);
+  test('solo publica los perfiles confirmados de Miguel, sin un teléfono o newsletter de ejemplo', () => {
+    expect(LINKS.find((l) => l.id === 'whatsapp')).toBeUndefined();
+    expect(LINKS.find((l) => l.id === 'newsletter')).toBeUndefined();
+    expect(PROFILE_LINKS.map((l) => l.id)).toEqual(['github', 'linkedin', 'instagram', 'youtube', 'spotify']);
+    expect(LINKS.find((l) => l.id === 'github')?.url).toBe('https://github.com/miguefomb');
+    expect(LINKS.find((l) => l.id === 'linkedin')?.url).toBe('https://www.linkedin.com/in/miguelfombuena/');
   });
 
   test('cada enlace es https y su icono existe en public/links', () => {

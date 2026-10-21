@@ -27,7 +27,9 @@ const aDataUri = (s) => `data:image/svg+xml;base64,${Buffer.from(s).toString('ba
 const foto = `data:image/webp;base64,${readFileSync(ruta('src/assets/foto.webp')).toString('base64')}`;
 const plantillaOg = readFileSync(ruta('scripts/plantillas/og.html'), 'utf8').replace('{{FOTO}}', foto)
   .replace('{{NOMBRE}}', PERSONA.name)
-  .replace('{{DOMINIO}}', new URL(PERSONA.siteUrl).host);
+  .replace('{{DOMINIO}}', new URL(PERSONA.siteUrl).host)
+  .replaceAll('{{OS_NOMBRE}}', PERSONA.osName)
+  .replaceAll('{{TAGLINE}}', PERSONA.tagline);
 
 const navegador = await chromium.launch({ channel: 'chrome' });
 

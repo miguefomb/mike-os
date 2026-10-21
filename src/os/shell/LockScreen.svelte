@@ -82,7 +82,7 @@
           data-testid="lock-photo"
         />
       {:else}
-        <span data-testid="lock-initials">PM</span>
+        <span data-testid="lock-initials">{PERSONA.initials}</span>
       {/if}
     </div>
     <h1 class="name" data-testid="lock-name">{PERSONA.name}</h1>

@@ -1,7 +1,7 @@
 // @ts-check
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
+import vercel from '@astrojs/vercel';
 import svelte from '@astrojs/svelte';
 import { cspDirectives, inlineScriptHash, scriptResources } from './src/lib/csp.ts';
 import { PREFS_BOOT_SCRIPT } from './src/lib/prefs.ts';
@@ -35,9 +35,7 @@ const OS_SHARED = [
 // Todas las páginas se pre-renderizan. Solo /api/contact (M-08) se ejecuta bajo demanda.
 export default defineConfig({
   site: PERSONA.siteUrl,
-  // 'compile' optimiza las imágenes al compilar. Pol OS no usa sesiones: sin ellas, el adaptador
-  // no pide un KV y el despliegue no crea ese recurso en la cuenta de Cloudflare.
-  adapter: cloudflare({ imageService: 'compile' }),
+  adapter: vercel(),
   session: false,
   // La barra de desarrollo de Astro se pinta abajo en el centro, encima del dock.
   devToolbar: { enabled: false },

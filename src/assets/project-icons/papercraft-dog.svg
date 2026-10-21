@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" style="--ink:#b5693c"><title>Papercraft Dog</title>
+    <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e9a476"/><stop offset="1" stop-color="#b5693c"/></linearGradient><radialGradient id="light" cx=".25" cy="0" r="1"><stop stop-color="white" stop-opacity=".2"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#b5693c" flood-opacity=".28"/></filter></defs>
+    <rect width="256" height="256" rx="59" fill="url(#bg)"/><rect width="256" height="256" rx="59" fill="url(#light)"/><rect x="1" y="1" width="254" height="254" rx="58" fill="none" stroke="white" stroke-opacity=".25" stroke-width="2"/><g filter="url(#shadow)"><path d="m66 83 39-28 25 23 27-23 37 28-12 94-52 31-52-31Z" fill="white"/>
+      <path d="m66 83 39-28-6 69Zm128 0-37-28 7 69Z" fill="#b5693c" opacity=".5"/>
+      <path d="m78 177 52-40 52 40-52 31Z" fill="#b5693c" opacity=".16"/>
+      <path d="m130 78-31 46 31 13 34-13Z" fill="#b5693c" opacity=".08"/>
+      <path d="m116 152 14 13 15-13Z" fill="#b5693c"/>
+      <circle cx="103" cy="129" r="7" fill="#b5693c"/><circle cx="157" cy="129" r="7" fill="#b5693c"/>
+      <path d="M130 165v14" stroke="#b5693c" stroke-width="6" stroke-linecap="round"/></g></svg>

@@ -1,5 +1,11 @@
 # Arquitectura técnica
 
+> **Mike OS (Vercel):** adaptador `@astrojs/vercel`, Node.js 24 y cabeceras de producción en `vercel.json`. Las rutas `/api/contact`, `/api/guestbook` y `/api/guestbook/confirm` usan `src/server/services.ts`: configuración de entorno de Astro, Resend y contadores Redis atómicos con caducidad de 60 segundos. Sin configuración completa no se habilita el envío. `content/`, `.env*`, `.dev.vars*` y cachés locales se excluyen del repositorio y del despliegue. `wrangler.jsonc`, `.dev.vars.example` y las secciones históricas de Cloudflare se conservan como referencia de la plantilla; no intervienen en el despliegue actual.
+
+> **Mike OS:** el estado de esta adaptación y las fuentes del contenido están en [contenido-mike.md](contenido-mike.md). El Stack combina un catálogo profesional manual con estadísticas opcionales de GitHub; actualmente no hay recuentos publicados. La carpeta `content/` es referencia local y se excluye de la comprobación de tipos.
+
+La copia de GitHub incluye todos los repositorios públicos del perfil, sin filtrar por topics. El PDF del CV se sirve con `Cache-Control: no-store` y un enlace versionado con la huella del texto que lo generó; la web y el PDF utilizan el mismo Markdown. Los iconos propios se mantienen como SVG y se exportan a PNG con el Sharp incluido en Astro.
+
 > **Plantilla:** este documento es el de Pol OS, el portfolio de Pol Marzà del que nace esta plantilla. Déjalo como ejemplo del método o reescríbelo para tu proyecto.
 
 <!-- Documento vivo. Actualizar cada vez que cambie el stack, la estructura de carpetas

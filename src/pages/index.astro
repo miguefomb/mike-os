@@ -10,6 +10,7 @@ import { externalLinks, pdfHref } from '../lib/cv';
 import { noteHref, sortNotes } from '../lib/notes';
 import fotoPersona from '../assets/foto.webp';
 import { LINKS } from '../content/links';
+import cvVersion from '../content/sobre-mi.pdf.sha256?raw';
 
 const projects: ProjectData[] = (await getCollection('projects'))
   .sort((a, b) => a.data.order - b.data.order)
@@ -54,13 +55,13 @@ const about: AboutData = {
   tagline: aboutFront.tagline,
   hook: aboutFront.hook,
   photo: avatar,
-  pdf: pdfHref(__CV_PDF_EXISTS__),
+  pdf: pdfHref(__CV_PDF_EXISTS__, `/cv.pdf?v=${cvVersion.trim()}`),
 };
 
 // El título cabe en los 60 caracteres que Google suele enseñar; la línea de Pol es lo que le diferencia.
-const title = `${PERSONA.name} · ${PERSONA.tagline}`;
+const title = `${PERSONA.osName} · ${PERSONA.name}`;
 const description =
-  'Mi portfolio en forma de sistema operativo, dentro del navegador. Abre mis proyectos, lee mis notas y escríbeme desde su correo.';
+  'Miguel Fombuena, Valencia: IA aplicada, automatización, desarrollo web y producción audiovisual y musical con Mad Mike Prods. Explora mi trabajo en Mike OS.';
 ---
 
 <Base {title} {description}>

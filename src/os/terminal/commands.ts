@@ -275,13 +275,7 @@ add('wallpaper', {
   },
 });
 
-const LOGO = [
-  ' ____       _    ___  ____  ',
-  '|  _ \\ ___ | |  / _ \\/ ___| ',
-  '| |_) / _ \\| | | | | \\___ \\ ',
-  '|  __/ (_) | | | |_| |___) |',
-  '|_|   \\___/|_|  \\___/|____/ ',
-];
+const LOGO = ['  ┌────────────────────┐', '  │      MIKE OS       │', '  │   FRAME × BEAT     │', '  │   CODE  ×  CREATE  │', '  └────────────────────┘'];
 
 function uptime(ms: number) {
   const s = Math.max(0, Math.round(ms / 1000));
@@ -295,7 +289,7 @@ add('neofetch', {
     const info: [string, string][] = [
       ['OS', PERSONA.osName],
       ['Host', 'tu navegador'],
-      ['Shell', 'pol-sh (de mentira)'],
+      ['Shell', 'mike-sh (de mentira)'],
       ['Tema', `${THEME_NAMES[ctx.theme]} · fondo ${ctx.wallpaper}`],
       ['Pantalla', `${ctx.viewport.width}×${ctx.viewport.height}`],
       ['Stack', 'Astro · Svelte · Cloudflare'],
@@ -306,7 +300,7 @@ add('neofetch', {
     for (let i = 0; i < rows; i++) {
       const art = (LOGO[i] ?? '').padEnd(30);
       const right: Segment[] =
-        i === 0 ? [seg('pol@pol-os', 'accent')] : i === 1 ? [seg('──────────', 'muted')] : info[i - 2] ? [seg(`${info[i - 2][0]}: `, 'accent'), seg(info[i - 2][1])] : [];
+        i === 0 ? [seg(PERSONA.terminalUser, 'accent')] : i === 1 ? [seg('────────────', 'muted')] : info[i - 2] ? [seg(`${info[i - 2][0]}: `, 'accent'), seg(info[i - 2][1])] : [];
       lines.push([seg(art, 'accent'), ...right]);
     }
     return out(lines);

@@ -6,7 +6,7 @@
 import {
   siAstro,
   siClaude,
-  siCloudflareworkers,
+  siVercel,
   siGithub,
   siGithubactions,
   siPnpm,
@@ -29,15 +29,15 @@ export const TECHS: readonly Tech[] = [
   { id: 'astro', name: 'Astro', role: 'El sitio: páginas estáticas, contenido y rutas', logo: siAstro.path },
   { id: 'svelte', name: 'Svelte', role: 'El escritorio, las ventanas y las apps', logo: siSvelte.path },
   { id: 'typescript', name: 'TypeScript', role: 'Todo el código, en modo estricto', logo: siTypescript.path },
-  { id: 'cloudflare-workers', name: 'Cloudflare Workers', role: 'El alojamiento y el único código de servidor', logo: siCloudflareworkers.path },
+  { id: 'vercel', name: 'Vercel', role: 'El alojamiento y las funciones de servidor', logo: siVercel.path },
   { id: 'cloudflare-turnstile', name: 'Cloudflare Turnstile', role: 'La verificación anti-bots de los formularios', logo: null },
   { id: 'vite', name: 'Vite', role: 'La compilación y el servidor de desarrollo', logo: siVite.path },
   { id: 'vitest', name: 'Vitest', role: 'Las pruebas unitarias', logo: siVitest.path },
   { id: 'playwright', name: 'Playwright', role: 'Las pruebas en un navegador real', logo: null },
   { id: 'pnpm', name: 'pnpm', role: 'Los paquetes del proyecto', logo: siPnpm.path },
   { id: 'github', name: 'GitHub', role: 'El repositorio y los datos de los proyectos', logo: siGithub.path },
-  { id: 'github-actions', name: 'GitHub Actions', role: 'La tarea diaria que actualiza los datos', logo: siGithubactions.path },
-  { id: 'claude-code', name: 'Claude Code', role: 'El agente con el que lo he construido', logo: siClaude.path },
+  { id: 'github-actions', name: 'GitHub Actions', role: 'Actualización opcional de los datos de GitHub', logo: siGithubactions.path },
+  { id: 'claude-code', name: 'Claude Code', role: 'El agente de desarrollo de la plantilla original', logo: siClaude.path },
 ];
 
 /** Las iniciales de una tecnología, para cuando no tiene logo: «Cloudflare Turnstile» → «CT». */

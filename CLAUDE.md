@@ -68,10 +68,11 @@ El procedimiento completo —comprobar lo ya configurado, elegir alcance (`user`
 
 ## Descripción del proyecto
 
-**Nombre:** pol-os-template
-**Descripción:** Plantilla de portfolio con forma de sistema operativo de escritorio en el navegador.
-**Estado actual:** Plantilla con contenido de ejemplo (una persona ficticia, Álex Ejemplo). Quien la usa cambia
-`src/content/` (empezando por `src/content/persona.ts`) y la foto de `src/assets/`.
+**Nombre:** Mike OS
+**Descripción:** Portfolio de Miguel Fombuena Llorens / Mad Mike Prods, adaptado de pol-os-template.
+**Estado actual:** Personalizado con el material de `content/madmike_vercel/`, que se conserva como referencia sin modificar.
+Destino de publicación: Vercel, proyecto `mike-os`, dominio `https://migueos.vercel.app` y repositorio público `miguefomb/mike-os`. Los formularios esperan configuración real de correo, Turnstile y límites compartidos. Favoritos contiene 81 entradas reales con imágenes y orden alfabético; las reseñas están vacías.
+Las fuentes y decisiones están en `docs/contenido-mike.md`. El resto de estos documentos conserva el método de la plantilla.
 
 Un escritorio estilo macOS: pantalla de acceso decorativa, proyectos que se abren en un navegador interno, el CV
 como documento, una carpeta de notas con su página pública, una terminal con minijuegos, un Libro de visitas y un
@@ -83,11 +84,11 @@ Requisitos en `docs/prd.md`, diseño en `docs/design-system.md`.
 
 ## Stack tecnológico
 
-- Framework: Astro con `@astrojs/cloudflare`; el escritorio es una isla de Svelte 5
+- Framework: Astro con `@astrojs/vercel`; el escritorio es una isla de Svelte 5
 - Base de datos: ninguna (el contenido son colecciones de Astro en el repo)
 - Estilos: CSS propio con variables, según `docs/design-system.md`
-- Despliegue: Cloudflare Workers con activos estáticos; lo despliega Pol, no el agente
-- Otras integraciones: Cloudflare Email Service, Turnstile y `ratelimit` (formulario de Correo)
+- Despliegue: Vercel con páginas estáticas y funciones Node.js 24
+- Formularios opcionales: Resend, Cloudflare Turnstile y contadores temporales de Upstash Redis; no envían sin configuración completa
 
 Detalle y justificación en `docs/architecture.md`.
 
@@ -241,11 +242,10 @@ Si la carpeta `mejoras/` no existe, créala.
   `guestbook/`, y la foto en `src/assets/foto.webp`. Los tests leen esos archivos: al cambiarlos no hay que tocar
   los tests, salvo los que comprueban textos del contenido de ejemplo.
 - Después de cambiar el CV: `node scripts/generar-cv.mjs` (PDF). Después de cambiar la foto o el nombre:
-  `node scripts/generar-imagenes.mjs` (iconos e imagen para compartir). Las portadas de ejemplo de Favoritos:
-  `node scripts/generar-portadas-ejemplo.mjs`. Los tres necesitan Google Chrome.
-- Secretos: en producción, con `wrangler secret put` introduciendo el valor de forma interactiva, nunca como
-  argumento. En local, `.dev.vars` (copia de `.dev.vars.example`, con valores de **prueba**). Si existe `.dev.vars`,
-  Wrangler deja de leer los `.env` para el servidor.
+  `node scripts/generar-imagenes.mjs` (iconos e imagen para compartir). Ambos necesitan Google Chrome.
+  Favoritos se mantiene con `node scripts/importar-favoritos.mjs`: usa las fuentes registradas en `docs/favoritos-fuentes.json` y Sharp, sin Chrome.
+- Secretos: en producción, en Vercel > Settings > Environment Variables. En local, `.env.local`, ignorado por Git.
+  `.env.example` documenta los nombres y no lleva valores reales. `.dev.vars` y Wrangler ya no se utilizan.
 - `pnpm build`, `pnpm preview` y `pnpm test:csp` comparten la caché de Vite con `pnpm dev`: con el servidor de
   desarrollo abierto pueden dejarlo devolviendo 500. Avisa antes de lanzarlos. Al parar servidores, hazlo por PID
   (`lsof -ti :PUERTO`).

@@ -12,14 +12,15 @@ export const pdfHref = (exists: boolean, href: string = CV_PDF_PATH): string | n
 
 /** Separa el bloque `---` del principio (solo pares `clave: valor`) del resto del texto. */
 export function splitFrontmatter(markdown: string): { data: Record<string, string>; body: string } {
-  const match = /^---\n([\s\S]*?)\n---\n?/.exec(markdown.replace(/\r\n/g, '\n'));
+  const normalized = markdown.replace(/\r\n/g, '\n');
+  const match = /^---\n([\s\S]*?)\n---\n?/.exec(normalized);
   if (!match) return { data: {}, body: markdown };
   const data: Record<string, string> = {};
   for (const line of match[1].split('\n')) {
     const i = line.indexOf(':');
     if (i > 0) data[line.slice(0, i).trim()] = line.slice(i + 1).trim();
   }
-  return { data, body: markdown.slice(match[0].length) };
+  return { data, body: normalized.slice(match[0].length) };
 }
 
 /** Los enlaces `https://` del texto se abren en una pestaña nueva y sin dar acceso a Pol OS. */

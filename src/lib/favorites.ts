@@ -11,9 +11,6 @@ export const SECTIONS = [
 ] as const;
 export type SectionId = (typeof SECTIONS)[number]['id'];
 
-/** Cada sección es un top 10. */
-export const MAX_ITEMS = 10;
-
 /** El identificador de un vídeo de YouTube: once caracteres de letras, números, guion y guion bajo. */
 export const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
 
@@ -31,17 +28,20 @@ export interface GameItem {
   title: string;
   year?: number;
   cover: string;
-  /** La ficha del juego en Shelvid. */
+  /** Ficha del juego o la saga. */
   url: string;
+  /** Entrega usada como portada representativa de una saga. */
+  edition?: string;
 }
 export interface MovieItem {
   id: string;
   title: string;
-  year: number;
-  synopsis: string;
+  year?: number;
+  synopsis?: string;
+  category?: 'Película' | 'Serie' | 'Saga';
   cover: string;
   /** El identificador del tráiler en YouTube. */
-  trailer: string;
+  trailer?: string;
 }
 export interface BookItem {
   id: string;
@@ -60,6 +60,18 @@ export interface SongItem {
   duration?: string;
 }
 
+export interface ArtistItem {
+  type: 'artist';
+  id: string;
+  title: string;
+  cover: string;
+  url: string;
+}
+export const isSong = (item: SongItem | ArtistItem): item is SongItem => 'video' in item;
+
+const alphabet = new Intl.Collator('es', { sensitivity: 'base', numeric: true });
+export const compareFavorites = (a: { title: string }, b: { title: string }) => alphabet.compare(a.title, b.title);
+
 interface SectionBase<K extends SectionId, I> {
   kind: K;
   title: string;
@@ -74,7 +86,7 @@ export interface BooksSection extends SectionBase<'books', BookItem> {
   link?: { label: string; url: string };
 }
 export type MoviesSection = SectionBase<'movies', MovieItem>;
-export type MusicSection = SectionBase<'music', SongItem>;
+export type MusicSection = SectionBase<'music', SongItem | ArtistItem>;
 export type FavoritesSection = GamesSection | MoviesSection | BooksSection | MusicSection;
 
 export const songUrl = (video: string) => `https://music.youtube.com/watch?v=${video}`;
@@ -90,7 +102,10 @@ export interface Track {
 }
 
 export const songTrack = (s: SongItem): Track => ({ id: `song:${s.id}`, video: s.video, title: s.title, subtitle: s.artist, url: songUrl(s.video) });
-export const trailerTrack = (m: MovieItem): Track => ({ id: `trailer:${m.id}`, video: m.trailer, title: m.title, subtitle: `Tráiler · ${m.year}`, url: trailerUrl(m.trailer) });
+export const trailerTrack = (m: MovieItem): Track => {
+  if (!m.trailer) throw new Error('Esta película no tiene tráiler configurado');
+  return { id: `trailer:${m.id}`, video: m.trailer, title: m.title, subtitle: m.year ? `Tráiler · ${m.year}` : 'Tráiler', url: trailerUrl(m.trailer) };
+};
 
 /** La canción que viene después de la actual en la lista, o null si es la última (o no está en ella). */
 export function nextTrack(queue: readonly Track[], currentId: string): Track | null {

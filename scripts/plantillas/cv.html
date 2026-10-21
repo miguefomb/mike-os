@@ -4,18 +4,20 @@
 <meta charset="utf-8">
 <title>{{NOMBRE}} — Currículum</title>
 <style>
-  @page { size: A4; margin: 18mm 20mm; }
+  @page { size: A4; margin: 16mm 18mm; }
   * { box-sizing: border-box; }
-  body { margin: 0; font: 10.5pt/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; color: #1d1d1f; }
+  body { margin: 0; font: 10pt/1.35 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; color: #1d1d1f; }
   header { display: flex; align-items: center; gap: 16pt; margin-bottom: 14pt; }
   header img { width: 64pt; height: 64pt; border-radius: 50%; object-fit: cover; }
   h1 { margin: 0; font-size: 24pt; letter-spacing: -0.01em; }
   .tagline { margin: 3pt 0 0; font-size: 11.5pt; font-weight: 600; }
   .hook { margin: 0 0 8pt; font-size: 11pt; color: #4a4a4f; font-style: italic; }
-  h2 { margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 0.5pt solid #c9c9ce; font-size: 12.5pt; break-after: avoid; }
-  p { margin: 0 0 6pt; orphans: 3; widows: 3; }
+  h2 { margin: 12pt 0 5pt; padding-bottom: 3pt; border-bottom: 0.5pt solid #c9c9ce; font-size: 12pt; break-after: avoid; }
+  h2:nth-of-type(4) { break-before: page; }
+  h3 { margin: 8pt 0 3pt; font-size: 10pt; break-after: avoid; }
+  p { margin: 0 0 4pt; orphans: 3; widows: 3; }
   ul { margin: 0 0 6pt; padding-left: 14pt; }
-  li { margin: 0 0 3pt; break-inside: avoid; }
+  li { margin: 0 0 2pt; break-inside: avoid; }
   a { color: #0058d6; text-decoration: none; }
   footer { margin-top: 18pt; padding-top: 6pt; border-top: 0.5pt solid #c9c9ce; font-size: 9pt; color: #636368; }
 </style>

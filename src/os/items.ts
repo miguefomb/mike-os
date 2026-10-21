@@ -109,7 +109,7 @@ const guestbookItem: Item = { id: 'guestbook', label: 'Libro de visitas', icon: 
 const favoritesItem: Item = { id: 'favorites', label: 'Favoritos', icon: tileIcon('favorites'), open: { app: 'favorites' } };
 const howtoItem: Item = { id: 'howto', label: 'Cómo está hecho', icon: tileIcon('blueprint'), open: { app: 'howto' } };
 const stackItem: Item = { id: 'stack', label: 'Stack', icon: tileIcon('stack'), open: { app: 'stack' } };
-// GitHub ya no es un enlace: abre su ventana con los repositorios destacados (C-01). Los demás accesos siguen abriendo una pestaña nueva.
+// GitHub abre su ventana con los repositorios públicos (C-01). Los demás accesos siguen abriendo una pestaña nueva.
 const linkItems: Item[] = LINKS.map((l) =>
   l.id === 'github' ? { id: l.id, label: l.label, icon: { kind: 'image', src: l.icon }, open: { app: 'github' } } : { id: l.id, label: l.label, icon: { kind: 'image', src: l.icon }, href: l.url },
 );

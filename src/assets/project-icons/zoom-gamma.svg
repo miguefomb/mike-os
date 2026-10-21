@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" style="--ink:#5551bb"><title>Zoom a Gamma</title>
+    <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#8d8aff"/><stop offset="1" stop-color="#5551bb"/></linearGradient><radialGradient id="light" cx=".25" cy="0" r="1"><stop stop-color="white" stop-opacity=".2"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#5551bb" flood-opacity=".28"/></filter></defs>
+    <rect width="256" height="256" rx="59" fill="url(#bg)"/><rect width="256" height="256" rx="59" fill="url(#light)"/><rect x="1" y="1" width="254" height="254" rx="58" fill="none" stroke="white" stroke-opacity=".25" stroke-width="2"/><g filter="url(#shadow)"><rect x="49" y="58" width="112" height="74" rx="14" fill="white" opacity=".52"/>
+      <rect x="89" y="104" width="119" height="81" rx="14" fill="white"/>
+      <path d="M148 185v22m-26 0h52" stroke="white" stroke-width="9" stroke-linecap="round"/>
+      <path d="m139 128 28 17-28 17Z" fill="#5551bb"/>
+      <path d="M73 166H49v-25m0 0-12 13m12-13 13 12M181 67h26v24m0 0-13-12m13 12 12-13" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g></svg>

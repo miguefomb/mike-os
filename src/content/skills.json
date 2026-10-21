@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ia",
+    "title": "Inteligencia artificial",
+    "description": "Asistentes, análisis documental, bases de conocimiento y modelos locales.",
+    "tools": ["ChatGPT", "Claude", "Codex", "Hermes", "Gemini", "Ollama", "LangChain", "LlamaIndex", "Hugging Face", "Python", "PyTorch"]
+  },
+  {
+    "id": "automatizacion",
+    "title": "Automatización y datos",
+    "description": "Integración de herramientas, APIs y procesos de negocio.",
+    "tools": ["Power Automate", "Power Platform", "SharePoint", "Microsoft 365", "Make", "n8n", "Zapier", "Airtable", "FastAPI", "Google Sheets"]
+  },
+  {
+    "id": "web",
+    "title": "Desarrollo web y UX",
+    "description": "Interfaces, animación e interacción, con desarrollo asistido por IA.",
+    "tools": ["HTML", "CSS", "JavaScript", "GSAP", "Three.js", "Next.js", "Vite", "Tailwind CSS", "Figma", "Claude Code", "Cursor", "Antigravity"]
+  },
+  {
+    "id": "audiovisual",
+    "title": "Imagen, diseño y postproducción",
+    "description": "Dirección, montaje, motion graphics, branding y color cinematográfico.",
+    "tools": ["DaVinci Resolve", "Premiere Pro", "After Effects", "Photoshop", "Illustrator", "InDesign", "Blender", "Unreal Engine", "Canva", "ComfyUI"]
+  },
+  {
+    "id": "formacion",
+    "title": "Formación y soporte técnico",
+    "description": "Formación presencial, online e híbrida; LMS, eventos y retransmisiones.",
+    "tools": ["Microsoft Teams", "Zoom", "Moodle", "LMS"]
+  },
+  {
+    "id": "musica",
+    "title": "Producción musical",
+    "description": "Beats originales, composición, grabación, mezcla, mastering y diseño sonoro.",
+    "tools": ["FL Studio", "Ableton Live", "Pro Tools"]
+  }
+]

@@ -44,7 +44,7 @@ describe('about, projects, ls y social', () => {
     const r = run('about', ctx());
     const t = flat(r.lines);
     expect(t).toContain(PERSONA.name);
-    expect(t).not.toMatch(/@|gmail|mailto/i);
+    expect(t).not.toMatch(/[\w.+-]+@[\w-]+\.[\w.-]+|mailto:/i);
     const hrefs = r.lines.flat().filter((s) => s.href).map((s) => s.href);
     expect(hrefs).toEqual(LINKS.map((l) => l.url));
   });
@@ -213,7 +213,7 @@ describe('comandos de sistema', () => {
   });
   test('neofetch enseña el logo y los datos del estado', () => {
     const t = text('neofetch');
-    expect(t).toContain('pol@pol-os');
+    expect(t).toContain(PERSONA.terminalUser);
     expect(t).toContain('1280×800');
     expect(t).toContain('1 min 15 s');
     expect(t).toContain('Astro · Svelte · Cloudflare');

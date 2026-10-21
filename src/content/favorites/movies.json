@@ -3,44 +3,268 @@
   "title": "Películas y series",
   "items": [
     {
-      "id": "big-buck-bunny",
-      "title": "Big Buck Bunny",
-      "year": 2008,
-      "synopsis": "Un conejo gigante y pacífico decide dar una lección a tres roedores que no paran de fastidiar. Película abierta de Blender.",
-      "cover": "/favoritos/peliculas/big-buck-bunny.jpg",
-      "trailer": "aqz-KE-bpKQ"
+      "id": "8-millas",
+      "title": "8 millas",
+      "cover": "/favoritos/peliculas/8-millas.jpg",
+      "category": "Película"
     },
     {
-      "id": "sintel",
-      "title": "Sintel",
-      "year": 2010,
-      "synopsis": "Una joven recorre un mundo hostil en busca del pequeño dragón al que cuidó. Película abierta de Blender.",
-      "cover": "/favoritos/peliculas/sintel.jpg",
-      "trailer": "eRsGyueVLvQ"
+      "id": "aladdin",
+      "title": "Aladdin",
+      "cover": "/favoritos/peliculas/aladdin.jpg",
+      "category": "Película"
     },
     {
-      "id": "tears-of-steel",
-      "title": "Tears of Steel",
-      "year": 2012,
-      "synopsis": "Un grupo de científicos intenta salvar el mundo de unos robots recreando un momento del pasado. Película abierta de Blender.",
-      "cover": "/favoritos/peliculas/tears-of-steel.jpg",
-      "trailer": "R6MlUcmOul8"
+      "id": "avatar",
+      "title": "Avatar",
+      "cover": "/favoritos/peliculas/avatar.jpg",
+      "category": "Película"
     },
     {
-      "id": "spring",
-      "title": "Spring",
-      "year": 2019,
-      "synopsis": "Una pastora y su perro se enfrentan a los espíritus antiguos para que vuelva la primavera. Película abierta de Blender.",
-      "cover": "/favoritos/peliculas/spring.jpg",
-      "trailer": "WhWc3b3KhnY"
+      "id": "black-mirror",
+      "title": "Black Mirror",
+      "cover": "/favoritos/peliculas/black-mirror.jpg",
+      "category": "Serie"
     },
     {
-      "id": "charge",
-      "title": "Charge",
-      "year": 2022,
-      "synopsis": "En un futuro sin energía, una anciana defiende su reserva de un robot cazador. Película abierta de Blender.",
-      "cover": "/favoritos/peliculas/charge.jpg",
-      "trailer": "UXqq0ZvbOnk"
+      "id": "breaking-bad",
+      "title": "Breaking Bad",
+      "cover": "/favoritos/peliculas/breaking-bad.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "coco",
+      "title": "Coco",
+      "cover": "/favoritos/peliculas/coco.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "como-entrenar-a-tu-dragon",
+      "title": "Cómo entrenar a tu dragón",
+      "cover": "/favoritos/peliculas/como-entrenar-a-tu-dragon.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "contratiempo",
+      "title": "Contratiempo",
+      "cover": "/favoritos/peliculas/contratiempo.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "digimon",
+      "title": "Digimon",
+      "cover": "/favoritos/peliculas/digimon.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "el-caballero-oscuro",
+      "title": "El caballero oscuro",
+      "cover": "/favoritos/peliculas/el-caballero-oscuro.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-club-de-la-lucha",
+      "title": "El club de la lucha",
+      "cover": "/favoritos/peliculas/el-club-de-la-lucha.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-codigo-da-vinci",
+      "title": "El código Da Vinci",
+      "cover": "/favoritos/peliculas/el-codigo-da-vinci.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-efecto-mariposa",
+      "title": "El efecto mariposa",
+      "cover": "/favoritos/peliculas/el-efecto-mariposa.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-juego-del-calamar",
+      "title": "El juego del calamar",
+      "cover": "/favoritos/peliculas/el-juego-del-calamar.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "el-libro-de-la-selva",
+      "title": "El libro de la selva",
+      "cover": "/favoritos/peliculas/el-libro-de-la-selva.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-libro-de-la-vida",
+      "title": "El libro de la vida",
+      "cover": "/favoritos/peliculas/el-libro-de-la-vida.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-planeta-del-tesoro",
+      "title": "El planeta del tesoro",
+      "cover": "/favoritos/peliculas/el-planeta-del-tesoro.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-rey-leon",
+      "title": "El rey león",
+      "cover": "/favoritos/peliculas/el-rey-leon.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "el-senor-de-los-anillos",
+      "title": "El señor de los anillos",
+      "cover": "/favoritos/peliculas/el-senor-de-los-anillos.jpg",
+      "category": "Saga"
+    },
+    {
+      "id": "harry-potter",
+      "title": "Harry Potter",
+      "cover": "/favoritos/peliculas/harry-potter.jpg",
+      "category": "Saga"
+    },
+    {
+      "id": "hercules",
+      "title": "Hércules",
+      "cover": "/favoritos/peliculas/hercules.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "inside-out",
+      "title": "Inside Out",
+      "cover": "/favoritos/peliculas/inside-out.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "interstellar",
+      "title": "Interstellar",
+      "cover": "/favoritos/peliculas/interstellar.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "juego-de-tronos",
+      "title": "Juego de Tronos",
+      "cover": "/favoritos/peliculas/juego-de-tronos.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "la-casa-de-papel",
+      "title": "La casa de papel",
+      "cover": "/favoritos/peliculas/la-casa-de-papel.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "la-espada-magica-en-busca-de-camelot",
+      "title": "La espada mágica (En busca de Camelot)",
+      "cover": "/favoritos/peliculas/la-espada-magica-en-busca-de-camelot.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "lilo-stitch",
+      "title": "Lilo & Stitch",
+      "cover": "/favoritos/peliculas/lilo-stitch.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "luces-rojas",
+      "title": "Luces rojas",
+      "cover": "/favoritos/peliculas/luces-rojas.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "matrix",
+      "title": "Matrix",
+      "cover": "/favoritos/peliculas/matrix.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "memento",
+      "title": "Memento",
+      "cover": "/favoritos/peliculas/memento.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "mindscape",
+      "title": "Mindscape",
+      "cover": "/favoritos/peliculas/mindscape.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "mulan",
+      "title": "Mulán",
+      "cover": "/favoritos/peliculas/mulan.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "oldboy",
+      "title": "Oldboy",
+      "cover": "/favoritos/peliculas/oldboy.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "origen",
+      "title": "Origen",
+      "cover": "/favoritos/peliculas/origen.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "piratas-del-caribe",
+      "title": "Piratas del Caribe",
+      "cover": "/favoritos/peliculas/piratas-del-caribe.jpg",
+      "category": "Saga"
+    },
+    {
+      "id": "rick-morty",
+      "title": "Rick & Morty",
+      "cover": "/favoritos/peliculas/rick-morty.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "seven",
+      "title": "Seven",
+      "cover": "/favoritos/peliculas/seven.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "shrek",
+      "title": "Shrek",
+      "cover": "/favoritos/peliculas/shrek.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "shutter-island",
+      "title": "Shutter Island",
+      "cover": "/favoritos/peliculas/shutter-island.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "space-jam",
+      "title": "Space Jam",
+      "cover": "/favoritos/peliculas/space-jam.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "stranger-things",
+      "title": "Stranger Things",
+      "cover": "/favoritos/peliculas/stranger-things.jpg",
+      "category": "Serie"
+    },
+    {
+      "id": "toy-story",
+      "title": "Toy Story",
+      "cover": "/favoritos/peliculas/toy-story.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "trainspotting",
+      "title": "Trainspotting",
+      "cover": "/favoritos/peliculas/trainspotting.jpg",
+      "category": "Película"
+    },
+    {
+      "id": "vaiana",
+      "title": "Vaiana",
+      "cover": "/favoritos/peliculas/vaiana.jpg",
+      "category": "Película"
     }
   ]
 }

@@ -8,6 +8,7 @@ import { PERSONA } from '../../src/content/persona';
 const markdown = readFileSync(join(process.cwd(), 'src/content/sobre-mi.md'), 'utf8');
 const tagline = /^tagline: (.+)$/m.exec(markdown)![1];
 const headings = [...markdown.matchAll(/^## (.+)$/gm)].map((m) => m[1]);
+const cvVersion = readFileSync(join(process.cwd(), 'src/content/sobre-mi.pdf.sha256'), 'utf8').trim();
 
 const isMobile = (name: string) => name.endsWith('movil');
 
@@ -35,12 +36,17 @@ test.describe('M-06 Sobre mí como documento', () => {
   test('el botón Descargar PDF apunta al PDF, y el PDF se sirve como PDF', async ({ page }, testInfo) => {
     await openAbout(page, testInfo.project.name);
     const button = page.getByTestId('about-download');
-    await expect(button).toHaveAttribute('href', '/cv.pdf');
+    await expect(button).toHaveAttribute('href', `/cv.pdf?v=${cvVersion}`);
     await expect(button).toHaveAttribute('download', /\.pdf$/);
     const res = await page.request.get('/cv.pdf');
     expect(res.status()).toBe(200);
     expect(res.headers()['content-type']).toContain('application/pdf');
     expect((await res.body()).subarray(0, 5).toString()).toBe('%PDF-');
+    const pendingDownload = page.waitForEvent('download');
+    await button.click();
+    const download = await pendingDownload;
+    expect(download.suggestedFilename()).toBe(PERSONA.cvFileName);
+    expect(readFileSync((await download.path())!)).toEqual(readFileSync(join(process.cwd(), 'public/cv.pdf')));
   });
 
   test('el enlace a Proyectos abre la app Proyectos y el de Correo abre Correo', async ({ page }, testInfo) => {
@@ -63,7 +69,7 @@ test.describe('M-06 Sobre mí como documento', () => {
       await expect(link).toHaveAttribute('target', '_blank');
       await expect(link).toHaveAttribute('rel', /noopener/);
     }
-    await expect(page.getByTestId('about-body').getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/tu-perfil/');
+    await expect(page.getByTestId('about-body').getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://www.linkedin.com/in/miguelfombuena/');
   });
 
   test.describe('casos negativos', () => {

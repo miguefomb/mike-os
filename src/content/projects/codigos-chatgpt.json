@@ -1,0 +1,33 @@
+{
+  "name": "Códigos para ChatGPT",
+  "domain": "madmikeprods.vercel.app/ia/codigos-gpt.html",
+  "description": "Una biblioteca de más de 180 atajos de prompting en 11 categorías.",
+  "summary": "Una biblioteca de más de 180 atajos de prompting en 11 categorías.",
+  "details": [
+    "Recurso organizado por intención: explicar, comparar, diseñar, analizar un negocio o preparar contenido para redes.",
+    "Los códigos son convenciones de prompting: etiquetas breves que acompañan una petición para indicar el formato o el enfoque. No activan funciones ocultas del producto.",
+    "La guía permite consultar y copiar los atajos e incluye una versión descargable en PDF."
+  ],
+  "stack": [
+    "Prompting",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/codigos-chatgpt/portada.webp",
+      "alt": "Portada de la guía de códigos para ChatGPT"
+    }
+  ],
+  "colors": {
+    "from": "#77c0ab",
+    "to": "#327a6d"
+  },
+  "url": "https://madmikeprods.vercel.app/ia/codigos-gpt.html",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 5,
+  "example": false,
+  "icon": "/projects/codigos-chatgpt.png"
+}

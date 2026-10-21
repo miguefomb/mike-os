@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { enter, loadNotes, stubExternalSites } from './helpers';
+import { enter, inFolder, loadNotes, loadProjects, stubExternalSites } from './helpers';
 
 test.describe('M-03 Modo móvil', () => {
   test.beforeEach(async ({ page }) => enter(page));
@@ -27,24 +27,25 @@ test.describe('M-03 Modo móvil', () => {
     await expect(page.getByTestId('mobile-home')).toBeVisible();
   });
 
-  test('el acceso a WhatsApp está en el inicio y abre la conversación en una pestaña nueva', async ({ page }) => {
-    const link = page.getByTestId('mobile-icon-whatsapp');
+  test('Mi pagina web está en el inicio y enlaza con la web real en una pestaña nueva', async ({ page }) => {
+    const link = page.getByTestId('mobile-icon-web-madmike');
     await expect(link).toBeVisible();
     const href = new URL((await link.getAttribute('href'))!);
-    expect(href.origin + href.pathname).toBe('https://wa.me/34600000000');
+    expect(href.origin + href.pathname).toBe('https://madmikeprods.vercel.app/');
     await expect(link).toHaveAttribute('target', '_blank');
     await expect(link).toHaveAttribute('rel', /noopener/);
   });
 
   test('las carpetas muestran sus elementos y abren cada uno', async ({ page, context }) => {
+    const project = inFolder(loadProjects())[0];
     await stubExternalSites(context);
     await page.getByTestId('mobile-icon-folder-projects').tap();
     const folder = page.getByTestId('mobile-folder');
     await expect(folder).toBeVisible();
-    await expect(folder.getByTestId('mobile-icon-project-recetario')).toBeVisible();
-    await folder.getByTestId('mobile-icon-project-recetario').tap();
+    await expect(folder.getByTestId('mobile-icon-project-' + project.id)).toBeVisible();
+    await folder.getByTestId('mobile-icon-project-' + project.id).tap();
     await expect(page.getByTestId('mobile-folder')).toHaveCount(0);
-    await expect(page.getByTestId('mobile-sheet')).toContainText('Recetario');
+    await expect(page.getByTestId('mobile-sheet')).toContainText(project.name);
 
     await page.getByTestId('mobile-back').tap();
     await page.getByTestId('mobile-icon-folder-notes').tap();

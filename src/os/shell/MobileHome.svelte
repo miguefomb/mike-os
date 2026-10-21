@@ -185,27 +185,39 @@
     display: grid;
     place-items: center;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     animation: fade-in 0.2s ease both;
   }
   .folder {
     width: min(340px, 100%);
+    max-height: calc(100% - 32px);
+    overflow-y: auto;
+    padding: 22px 18px;
+    border-radius: 30px;
+    background: var(--win-bg);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-win);
   }
   .folder h2 {
     margin: 0 0 14px 6px;
     font-size: calc(26px * var(--text-scale));
     font-weight: 700;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
   }
   .panel {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px 10px;
-    padding: 22px 16px;
-    border-radius: 34px;
-    background: rgba(255, 255, 255, 0.26);
-    border: 0.5px solid rgba(255, 255, 255, 0.35);
+  }
+  .panel .tile {
+    color: var(--fg);
+  }
+  .panel .label {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-shadow: none;
   }
 </style>

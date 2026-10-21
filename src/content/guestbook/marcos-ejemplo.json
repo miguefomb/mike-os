@@ -1,9 +1,0 @@
-{
-  "name": "Marcos Ejemplo",
-  "detail": "Fundador de una tienda online",
-  "relation": "cliente",
-  "order": 2,
-  "date": "2026-10-06",
-  "text": "Otra reseña de ejemplo. Las reales llegan por el formulario del Libro de visitas y se publican cuando las apruebas, como un archivo en src/content/guestbook/.",
-  "links": []
-}

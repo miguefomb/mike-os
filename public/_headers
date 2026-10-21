@@ -9,3 +9,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# El enlace incluye la huella del contenido y el archivo se vuelve a pedir en cada descarga.
+/cv.pdf
+  Cache-Control: no-store

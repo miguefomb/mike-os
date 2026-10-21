@@ -2,14 +2,14 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { PAIRS, deal, memoryPool } from '../../src/lib/memory';
-import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES } from '../../src/lib/memory-logos';
+import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES, MEMORY_PROFILE_TOOLS } from '../../src/lib/memory-logos';
 import { animationsDone, enter, stubExternalSites } from './helpers';
 
 const stack = JSON.parse(readFileSync('src/content/stack.json', 'utf8')) as { tools: { id: string; name: string }[] };
 const isMobile = (name: string) => name.endsWith('movil');
 
 /** Con el azar de `crypto` fijado a 0, el reparto es este: el test sabe dónde está cada pareja sin mirar el DOM. */
-const LAYOUT = deal(memoryPool([...stack.tools, ...MEMORY_EXTRAS], MEMORY_LOGOS, MEMORY_NAMES), () => 0).cards;
+const LAYOUT = deal(memoryPool([...MEMORY_PROFILE_TOOLS, ...stack.tools.filter((t) => !MEMORY_PROFILE_TOOLS.some((p) => p.id === t.id)), ...MEMORY_EXTRAS], MEMORY_LOGOS, MEMORY_NAMES), () => 0).cards;
 const pairsOf = () => {
   const seen = new Map<string, number[]>();
   LAYOUT.forEach((c, i) => seen.set(c.id, [...(seen.get(c.id) ?? []), i]));

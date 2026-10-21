@@ -1,0 +1,35 @@
+{
+  "name": "Zoom a Gamma",
+  "domain": "madmikeprods.vercel.app/ia/zoomtogamma.html",
+  "description": "Resúmenes de reuniones convertidos en presentaciones automáticamente.",
+  "summary": "Resúmenes de reuniones convertidos en presentaciones automáticamente.",
+  "details": [
+    "Flujo documentado para transformar el resumen de una reunión de Zoom en una presentación de Gamma. Un webhook recibe el evento, el orquestador procesa el contenido y solicita la generación mediante la API.",
+    "La guía incluye autenticación, filtros para elegir reuniones, consulta del estado de generación y envío del enlace y del PDF por correo.",
+    "Puede montarse en Make o n8n. La ficha enlaza a la documentación del flujo y sus requisitos, no a una integración que el visitante pueda ejecutar desde este portfolio."
+  ],
+  "stack": [
+    "Zoom AI Companion",
+    "Gamma API",
+    "Make",
+    "n8n",
+    "Webhooks",
+    "OAuth"
+  ],
+  "screenshots": [
+    {
+      "src": "/projects/zoom-gamma/portada.webp",
+      "alt": "Presentación del flujo de automatización de Zoom a Gamma"
+    }
+  ],
+  "colors": {
+    "from": "#8d8aff",
+    "to": "#5551bb"
+  },
+  "url": "https://madmikeprods.vercel.app/ia/zoomtogamma.html",
+  "embeddable": false,
+  "placement": "folder",
+  "order": 3,
+  "example": false,
+  "icon": "/projects/zoom-gamma.png"
+}

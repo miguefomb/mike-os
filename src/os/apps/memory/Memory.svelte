@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { tools } from '../../../content/stack.json';
-  import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES } from '../../../lib/memory-logos';
+  import { MEMORY_EXTRAS, MEMORY_LOGOS, MEMORY_NAMES, MEMORY_PROFILE_TOOLS } from '../../../lib/memory-logos';
   import { PAIRS, cryptoRand, deal, flip, hide, isDone, isFaceUp, isMatched, memoryPool, mustHide, type MemoryState } from '../../../lib/memory';
 
   // El memory (C-05): 16 cartas con los logos de las herramientas del Stack. Sus estilos están en global.css bajo .memory, para que la
@@ -10,7 +10,8 @@
   /** Lo que se ven dos cartas que no son pareja antes de taparse. */
   const HIDE_MS = 1000;
 
-  const pool = memoryPool([...tools, ...MEMORY_EXTRAS], MEMORY_LOGOS, MEMORY_NAMES);
+  const trackedTools = tools as { id: string; name: string }[];
+  const pool = memoryPool([...MEMORY_PROFILE_TOOLS, ...trackedTools.filter((t) => !MEMORY_PROFILE_TOOLS.some((p) => p.id === t.id)), ...MEMORY_EXTRAS], MEMORY_LOGOS, MEMORY_NAMES);
   let game = $state.raw<MemoryState>(deal(pool, cryptoRand));
   // `status` es para lectores de pantalla (dice qué carta se ha levantado); `note` es lo que se ve, sin nombres hasta que hay pareja.
   let status = $state('');

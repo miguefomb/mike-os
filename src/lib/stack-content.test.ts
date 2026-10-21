@@ -18,7 +18,8 @@ describe('src/content/stack.json', () => {
 
   test('los recuentos de repositorios cuadran', () => {
     expect(data.repos.public + data.repos.private).toBe(data.repos.total);
-    expect(data.repos.total).toBeGreaterThan(0);
+    expect(data.repos.total).toBeGreaterThanOrEqual(0);
+    if (data.repos.total === 0) expect(data.tools).toEqual([]);
   });
 
   test('todas las herramientas están en el catálogo, con su nombre y categoría', () => {

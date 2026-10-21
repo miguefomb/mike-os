@@ -3,39 +3,158 @@
   "title": "Música",
   "items": [
     {
-      "id": "monkeys-spinning-monkeys",
-      "title": "Monkeys Spinning Monkeys",
-      "artist": "Kevin MacLeod",
-      "cover": "/favoritos/musica/monkeys-spinning-monkeys.jpg",
-      "video": "LrM_Y39Gmhk"
+      "id": "aespa",
+      "title": "aespa",
+      "cover": "/favoritos/musica/aespa.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/113547672"
     },
     {
-      "id": "carefree",
-      "title": "Carefree",
-      "artist": "Kevin MacLeod",
-      "cover": "/favoritos/musica/carefree.jpg",
-      "video": "sMcWOaJFuw0"
+      "id": "alejandro-sanz",
+      "title": "Alejandro Sanz",
+      "cover": "/favoritos/musica/alejandro-sanz.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/4479"
     },
     {
-      "id": "fluffing-a-duck",
-      "title": "Fluffing a Duck",
-      "artist": "Kevin MacLeod",
-      "cover": "/favoritos/musica/fluffing-a-duck.jpg",
-      "video": "XhCARou6mRI"
+      "id": "alex-ubago",
+      "title": "Álex Ubago",
+      "cover": "/favoritos/musica/alex-ubago.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/5653"
     },
     {
-      "id": "wallpaper",
-      "title": "Wallpaper",
-      "artist": "Kevin MacLeod",
-      "cover": "/favoritos/musica/wallpaper.jpg",
-      "video": "wNjJiZk7H28"
+      "id": "cocco-lexa",
+      "title": "Cocco Lexa",
+      "cover": "/favoritos/musica/cocco-lexa.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/111153702"
     },
     {
-      "id": "local-forecast-elevator",
-      "title": "Local Forecast - Elevator",
-      "artist": "Kevin MacLeod",
-      "cover": "/favoritos/musica/local-forecast-elevator.jpg",
-      "video": "5IyL1l34PIs"
+      "id": "duki",
+      "title": "Duki",
+      "cover": "/favoritos/musica/duki.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/4902904"
+    },
+    {
+      "id": "eladio-carrion",
+      "title": "Eladio Carrión",
+      "cover": "/favoritos/musica/eladio-carrion.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/8613614"
+    },
+    {
+      "id": "eminem",
+      "title": "Eminem",
+      "cover": "/favoritos/musica/eminem.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/13"
+    },
+    {
+      "id": "estopa",
+      "title": "Estopa",
+      "cover": "/favoritos/musica/estopa.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/4474"
+    },
+    {
+      "id": "fondo-flamenco",
+      "title": "Fondo Flamenco",
+      "cover": "/favoritos/musica/fondo-flamenco.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/153422"
+    },
+    {
+      "id": "iann-dior",
+      "title": "iann dior",
+      "cover": "/favoritos/musica/iann-dior.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/59936352"
+    },
+    {
+      "id": "juan-luis-guerra",
+      "title": "Juan Luis Guerra",
+      "cover": "/favoritos/musica/juan-luis-guerra.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/4527779"
+    },
+    {
+      "id": "le-sserafim",
+      "title": "LE SSERAFIM",
+      "cover": "/favoritos/musica/le-sserafim.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/168158797"
+    },
+    {
+      "id": "melendi",
+      "title": "Melendi",
+      "cover": "/favoritos/musica/melendi.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/2697"
+    },
+    {
+      "id": "michael-jackson",
+      "title": "Michael Jackson",
+      "cover": "/favoritos/musica/michael-jackson.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/259"
+    },
+    {
+      "id": "myke-towers",
+      "title": "Myke Towers",
+      "cover": "/favoritos/musica/myke-towers.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/12029862"
+    },
+    {
+      "id": "plan-b",
+      "title": "Plan B",
+      "cover": "/favoritos/musica/plan-b.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/65838"
+    },
+    {
+      "id": "quevedo",
+      "title": "Quevedo",
+      "cover": "/favoritos/musica/quevedo.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/6705223"
+    },
+    {
+      "id": "raul-clyde",
+      "title": "Raul Clyde",
+      "cover": "/favoritos/musica/raul-clyde.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/102152692"
+    },
+    {
+      "id": "rels-b",
+      "title": "Rels B",
+      "cover": "/favoritos/musica/rels-b.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/10580067"
+    },
+    {
+      "id": "smash-mouth",
+      "title": "Smash Mouth",
+      "cover": "/favoritos/musica/smash-mouth.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/1179"
+    },
+    {
+      "id": "stromae",
+      "title": "Stromae",
+      "cover": "/favoritos/musica/stromae.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/310260"
+    },
+    {
+      "id": "twista",
+      "title": "Twista",
+      "cover": "/favoritos/musica/twista.jpg",
+      "type": "artist",
+      "url": "https://www.deezer.com/artist/298"
     }
   ]
 }

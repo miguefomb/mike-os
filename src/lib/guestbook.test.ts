@@ -186,8 +186,8 @@ const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
 const entries = files.map((f) => ({ id: f.replace(/\.json$/, ''), raw: readFileSync(join(dir, f), 'utf8'), data: JSON.parse(readFileSync(join(dir, f), 'utf8')) as Record<string, unknown> }));
 
 describe('src/content/guestbook', () => {
-  test('hay reseñas', () => {
-    expect(entries.length).toBeGreaterThan(0);
+  test('las reseñas ficticias de la plantilla no se atribuyen a Miguel', () => {
+    expect(entries.map((entry) => entry.data.name)).not.toEqual(expect.arrayContaining(['Lucía Ejemplo', 'Marcos Ejemplo']));
   });
 
   test('cada archivo tiene un nombre válido y los campos que la colección espera', () => {

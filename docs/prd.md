@@ -1,5 +1,9 @@
 # Product Requirements Document (PRD)
 
+> **Adaptación Mike OS (2026-10-21):** portfolio de Miguel Fombuena Llorens / Mad Mike Prods. Mantiene las apps y flujos de la plantilla. M-05 muestra herramientas profesionales sin estadísticas hasta disponer de datos calculados; M-07 utiliza sus perfiles confirmados (GitHub, LinkedIn, Instagram, YouTube y Spotify), sin WhatsApp ni newsletter. Favoritos y reseñas empiezan vacíos. Detalles en [contenido-mike.md](contenido-mike.md).
+
+> **Ajustes acordados el mismo día:** C-01 muestra todos los repositorios públicos del perfil, sin topics obligatorios. M-07 añade accesos externos a Mad Mike Prods y la web de Miguel, que se retiran de Proyectos. S-08 utiliza iconos propios para cada proyecto. M-06 amplía la trayectoria con el CV aportado y descarga el PDF actual con un enlace versionado.
+
 > **Plantilla:** este documento es el de Pol OS, el portfolio de Pol Marzà del que nace esta plantilla. Déjalo como ejemplo del método o reescríbelo para tu proyecto.
 
 <!-- Fuente de verdad sobre qué construimos y por qué.

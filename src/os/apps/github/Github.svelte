@@ -5,7 +5,7 @@
   import { dispatch } from '../../stores/os-actions';
   import stylesheet from './github.css?url';
 
-  // La ventana GitHub (C-01): los repositorios públicos que Pol etiqueta con `showcase`. Los datos los guarda la tarea diaria y se piden al
+  // La ventana GitHub (C-01): todos los repositorios públicos de Miguel. Los datos los guarda el script de actualización y se piden al
   // abrir la ventana; sus estilos llegan con ella (github.css), así la home no carga nada de esto.
   let { projects }: { projects: ProjectData[] } = $props();
 
@@ -50,7 +50,7 @@
     {:else if !data}
       <p class="gh-status" role="status">Cargando…</p>
     {:else if data.repos.length === 0}
-      <p class="gh-status" data-testid="github-empty">Todavía no hay repositorios destacados. Mientras tanto, están todos en mi perfil de GitHub.</p>
+      <p class="gh-status" data-testid="github-empty">Todavía no hay repositorios públicos en la lista. Puedes visitar mi perfil de GitHub.</p>
     {:else}
       <ul class="gh-list" data-testid="github-list">
         {#each data.repos as repo (repo.name)}
